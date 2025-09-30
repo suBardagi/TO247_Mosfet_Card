@@ -1,1 +1,3 @@
++12V_Power=+12V,GND
 Gate_Signals=Gate,Source,+15V,+5V,GND
+HV_Power=HVBUS,GNDPWR
