@@ -1,0 +1,2 @@
+Gate_Signals=Gate,Source,+15V,+5V,GND,GND_FETside
+MCU_Signals=PWM_Highside_P,PWM_Highside_N,PWM_Lowside_P,PWM_Lowside_N,GND
