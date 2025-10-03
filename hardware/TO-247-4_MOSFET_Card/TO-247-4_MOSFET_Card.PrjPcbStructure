@@ -1,4 +1,4 @@
-Record=TopLevelDocument|FileName=Connector-Harness.SchDoc|SheetNumber=4
-Record=NoMainPathDocument|SourceDocument=Connector-Harness.SchDoc|FileName=Gate_Drive.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=Connector-Harness.SchDoc|FileName=Main.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=Connector-Harness.SchDoc|FileName=Power.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=Main.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Main.SchDoc|Designator=U_Connector-Harness|SchDesignator=U_Connector-Harness|FileName=Connector-Harness.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=Connector-Harness.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Main.SchDoc|Designator=U_Gate_Drive|SchDesignator=U_Gate_Drive|FileName=Gate_Drive.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=Gate_Drive.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Main.SchDoc|Designator=U_Power|SchDesignator=U_Power|FileName=Power.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=Power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

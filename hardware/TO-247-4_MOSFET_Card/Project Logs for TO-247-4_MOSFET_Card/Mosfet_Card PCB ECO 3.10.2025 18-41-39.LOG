@@ -1,0 +1,4 @@
+Added Component: Designator=H1(Heatsink)
+Added Component: Designator=H2(Heatsink)
+Added Member To Class: ClassName=U_Connector-Harness Member=Component H1 TO-247_Heatsink
+Added Member To Class: ClassName=U_Connector-Harness Member=Component H2 TO-247_Heatsink
