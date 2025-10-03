@@ -1,3 +1,2 @@
 +12V_Power=+12V,GND
-HV_Power=HVBUS,GNDPWR,SW
 MCU_Signals=PWM_Highside_P,PWM_Highside_N,PWM_Lowside_P,PWM_Lowside_N,GND
