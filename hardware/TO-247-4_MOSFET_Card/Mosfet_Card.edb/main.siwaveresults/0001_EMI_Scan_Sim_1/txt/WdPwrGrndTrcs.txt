@@ -1,0 +1,34 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___WIDE POWER/GROUND TRACES___
+** INTRODUCTION **
+
+All power and ground traces longer than 0.635 mm 
+should be at least three times the nominal width of signal net traces to reduce the inductance of 
+those traces. 
+This does not include grounded guard traces. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Min Power/Ground Trace Width  0.381  
+Min Power/Ground Trace Length  0.635  
+Sort by Column  SEG WIDTH  
+Weighting Factor  0.2    
+
+** RESULTS: **
+INDEX  PWR/GND  VIOLATING SEG  SEG LAYER  SEG WIDTH  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

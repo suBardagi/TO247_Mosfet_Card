@@ -1,0 +1,27 @@
+            siwave_ng 2024 R2 (Built: May 23 2024 03:46:15)
+       Commenced on host SUBARDAGI at Mon Oct  6 20:13:40 2025
+
+------------------------------------------------------------------------
+|               |   Real   |   Cpu    |  Memory  |                     |
+|    Command    |   Time   |   Time   |          |                     |
+| geomproc      | 00:00:01 | 00:00:00 |   39748K |     7952 triangle   |
+| solve_setup   | 00:00:00 | 00:00:00 |   99808K |        1 project    |
+------------------------------------------------------------------------
+            Finished on SUBARDAGI at 10/06/2025 20:13:41
+
+
+           SIwave 2024 R2 May 23 2024 at 03:42:43 beginning
+         C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe
+                  on SUBARDAGI at 10/06/2025 20:13:43
+------------------------------------------------------------------------
+|               |   Real   |   Cpu    |  Memory  |                     |
+|    Command    |   Time   |   Time   |          | Number of Elements  |
+| geomproc      | 00:00:00 | 00:00:00 |   37532K |     8126 triangle   |
+| coupling      | 00:00:01 | 00:00:00 |  231100K |      291 xsections  |
+| xsec_solve    | 00:00:01 | 00:00:04 |  293232K |       72 MoMs       |
+| hotspot       | 00:00:00 | 00:00:00 |  293232K |       21 nets       |
+| SIwave        | 00:00:00 | 00:00:01 |  293232K |        0 matrix     |
+------------------------------------------------------------------------
+            Finished on SUBARDAGI at 10/06/2025 20:13:45
+
+

@@ -1,0 +1,34 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___DISTANCE FROM OSCILLATOR TO CLOCK DRIVER___
+** INTRODUCTION **
+
+All oscillator devices must be placed within 
+12.7 mm 
+of their clock drivers. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Max Distance from Oscillator to Clock Driver  12.7   
+Sort by Column  INDEX  
+Weighting Factor  0.5    
+Require Only One Comp Pin to be Within Specified Distance  YES    
+Require ALL Comp Pins to be Within Specified Distance  NO     
+
+** RESULTS: **
+INDEX  OSC NET  CLK DRV PIN  OSC PIN  VIO BOX  VIO MESSAGE  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

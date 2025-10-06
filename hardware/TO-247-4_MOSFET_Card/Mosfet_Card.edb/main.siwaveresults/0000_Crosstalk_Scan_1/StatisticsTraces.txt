@@ -1,0 +1,28 @@
+-------
+GENERAL
+-------
+
+Number of segments: 288
+
+----------------
+TRACE STATISTICS
+----------------
+
+284 segments have 1 traces
+4 segments have 2 traces
+
+-----------------------
+SMALL PLANES STATISTICS
+-----------------------
+
+282 segments have 0 small planes
+6 segments have 1 small planes
+
+------------------
+COPLANE STATISTICS
+------------------
+
+67 segments have 0 coplanes
+104 segments have 1 coplanes
+116 segments have 2 coplanes
+1 segments have 5 coplanes

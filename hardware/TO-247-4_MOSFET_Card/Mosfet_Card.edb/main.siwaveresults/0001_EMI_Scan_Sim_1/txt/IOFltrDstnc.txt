@@ -1,0 +1,34 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___I/O FILTER DISTANCE TO I/O CONNECTOR___
+** INTRODUCTION **
+
+All nets wired to connectors from specified class(es) must have a series filter element 
+(ferrite bead) within 
+6.35 mm of the connector or it must 
+have a capacitor-to-ground within 6.35 mm 
+of the connector. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Max Distance from Filter to I/O Connector  6.35   
+Sort by Column  INDEX  
+Weighting Factor  1.0    
+
+** RESULTS: **
+INDEX  NET    CONNECTOR  FERRITE_CAP  VIO MESSAGE  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

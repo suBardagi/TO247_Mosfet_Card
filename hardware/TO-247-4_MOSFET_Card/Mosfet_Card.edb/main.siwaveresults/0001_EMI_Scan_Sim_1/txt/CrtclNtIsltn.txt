@@ -1,0 +1,43 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___CRITICAL NET ISOLATION (SINGLE-ENDED NETS)___
+** INTRODUCTION **
+
+All critcal nets longer than 
+mm should have grouned guard traces on both besides within 
+1.27 mm to reduce crosstalk 
+to other nets. All guard traces to isolate critical nets must have vias to the ground plane at 
+each end and 
+every 12.7 mm along the 
+length. Groups of related critical nets may share a set of guard traces, as long as no other 
+non-critical 
+traces are within the guard trace area. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Vacant Track Isolation Allowed  YES    
+Minimum Isolation Distance Required  1.27   
+Sort by Column  INDEX  
+Weighting Factor  0.5    
+Minimum Critical Net Segment Length  1.27   
+Max Distance between Vias on Ground-Guard Traces  12.7   
+Ignore Violations If Approach Angle is 90 Degrees +/-  5      
+Critical Net Choice  CRITICAL  
+
+** RESULTS: **
+INDEX  CRITICAL NET  NEAR BY NET  CRIT SEG FROM  CRIT SEG TO  CRIT SEG LAYER  NEARBY SEG LAYER  VIO MESSAGE  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

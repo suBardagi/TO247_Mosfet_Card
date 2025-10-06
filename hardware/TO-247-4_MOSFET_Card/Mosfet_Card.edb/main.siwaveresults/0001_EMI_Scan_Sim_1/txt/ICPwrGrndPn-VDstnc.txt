@@ -1,0 +1,37 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___IC POWER/GROUND-REFERENCE PIN DISTANCE TO VIA___
+** INTRODUCTION **
+
+The trace between the power (or ground) pin of an IC 
+and the via to the power (or ground) plane must be no longer than 
+1.27 mm. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Maximum Distance between IC Pin and Via  1.27   
+Sort by Column  DISTANCE  
+Weighting Factor  0.9    
+Maximum Search Distance for Via  3.81   
+Apply Rule to Power Pins  YES    
+Apply Rule to Ground Pins  YES    
+Check Power/Ground Pins Without Plane  NO     
+Verify Via Connected to Appropriate Plane  YES    
+
+** RESULTS: **
+INDEX  IC PIN  ASSOC VIA  NET    LAYER  DISTANCE  MESSAGES  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	5__
+================================================================================

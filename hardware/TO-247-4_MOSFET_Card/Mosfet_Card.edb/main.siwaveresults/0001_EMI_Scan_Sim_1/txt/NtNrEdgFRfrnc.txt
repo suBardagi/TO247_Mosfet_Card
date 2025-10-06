@@ -1,0 +1,42 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___CRITICAL NET NEAR EDGE OF REFERENCE PLANE___
+** INTRODUCTION **
+
+Sections of critical nets which run parallel to the edge of a power or ground plane must 
+not be closer than 12.7 mm 
+of the plane edge for nets on external layers, or 6.35 
+mm for nets on buried layers. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Min Distance from Edge Required for External Signal Layers  12.7   
+Min Distance from Edge Required for Internal Signal Layers  6.35   
+Sort by Column  DISTANCE  
+Weighting Factor  0.7    
+Use Edge of Board (Instead of Edge of Plane)  NO     
+Check All Plane Edges  NO     
+Ignore Violation If Net Approaches Edge at 90 Degrees +/-  5      
+Check Nets on External Layers  YES    
+Check Nets on Internal Layers  YES    
+Minimum Net Segment Length for Violation  2.54   
+Recognize Dual Plane Reference Within  0.0508  
+Net Choice  CRITICAL  
+
+** RESULTS: **
+INDEX  NET    SEGMENT  EDGE SEG  SEG LAYER  REF LAYER  REF PLANE  REF EDGE  DIST   APP ANGLE  IS EXTERNALRANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	148__
+================================================================================

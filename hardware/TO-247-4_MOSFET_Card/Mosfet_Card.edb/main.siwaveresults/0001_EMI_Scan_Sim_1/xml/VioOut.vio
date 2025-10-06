@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- (C) Copyright IBM Corp. 2004. All Rights Reserved. -->
+<!-- Ansys EMI Scanner 2024 R2 -->
+<emsatAnalysis designName="C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/0001_EMI_Scan_Sim_1.aedb" outputFile="C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt" unit="mm">
+<ruletype name="Signal Reference">
+<rule name="Critical Net Crossing Split Reference Plane">
+</rule>
+<rule name="Critical Net Changing Reference Plane - Part A">
+</rule>
+<rule name="Critical Net Changing Reference Plane - Part B">
+</rule>
+<rule name="Critical Net Changing Reference Plane - Part C">
+</rule>
+<rule name="Critical Net Near Edge of Reference Plane">
+</rule>
+</ruletype>
+<ruletype name="Wiring/Crosstalk">
+<rule name="Critical Net Near I/O Net">
+</rule>
+<rule name="Length of Exposed Critical Traces">
+</rule>
+<rule name="Critical Net Isolation (Single-Ended Nets)">
+</rule>
+<rule name="Critical Net Isolation (Differential Nets)">
+</rule>
+<rule name="Critical Differential Net Length Matching and Spacing">
+</rule>
+<rule name="Wide Power/Ground Traces">
+</rule>
+</ruletype>
+<ruletype name="Decoupling">
+<rule name="Decoupling Capacitor Density">
+</rule>
+<rule name="Decoupling Capacitor Distance from IC Power Pin">
+</rule>
+<rule name="IC Power/Ground-Reference Pin Distance to Via">
+</rule>
+<rule name="Decoupling Capacitor Distance to Via">
+</rule>
+<rule name="Power/Ground-Reference Trace Decoupling">
+</rule>
+<rule name="Power Via Density">
+<vio rule="Power Via Density" index="0" rank="-1.000" longname="Power Via Density">
+<info>
+<param name="Rank" value="-1.000" />
+<param name="Index" value="0" />
+<param name="Net" value="GND_Highside" />
+<param name="Layer1" value="Top Layer" type="LAYER" />
+<param name="Layer2" value="Layer 1" type="LAYER" />
+<param name="Number of Vias" value="0" />
+<param name="Grid Location" type="BOX" x1="0" y1="0" x2="25.4" y2="25.4" />
+</info>
+<algodata>
+</algodata>
+</vio>
+<vio rule="Power Via Density" index="1" rank="-1.000" longname="Power Via Density">
+<info>
+<param name="Rank" value="-1.000" />
+<param name="Index" value="1" />
+<param name="Net" value="GND_Highside" />
+<param name="Layer1" value="Layer 1" type="LAYER" />
+<param name="Layer2" value="Layer 2" type="LAYER" />
+<param name="Number of Vias" value="0" />
+<param name="Grid Location" type="BOX" x1="0" y1="0" x2="25.4" y2="25.4" />
+</info>
+<algodata>
+</algodata>
+</vio>
+<vio rule="Power Via Density" index="2" rank="-1.000" longname="Power Via Density">
+<info>
+<param name="Rank" value="-1.000" />
+<param name="Index" value="2" />
+<param name="Net" value="GND_Highside" />
+<param name="Layer1" value="Layer 2" type="LAYER" />
+<param name="Layer2" value="Bottom Layer" type="LAYER" />
+<param name="Number of Vias" value="0" />
+<param name="Grid Location" type="BOX" x1="0" y1="0" x2="25.4" y2="25.4" />
+</info>
+<algodata>
+</algodata>
+</vio>
+<vio rule="Power Via Density" index="3" rank="-1.000" longname="Power Via Density">
+<info>
+<param name="Rank" value="-1.000" />
+<param name="Index" value="3" />
+<param name="Net" value="GND_Highside" />
+<param name="Layer1" value="Top Layer" type="LAYER" />
+<param name="Layer2" value="Layer 1" type="LAYER" />
+<param name="Number of Vias" value="0" />
+<param name="Grid Location" type="BOX" x1="0" y1="25.4" x2="25.4" y2="50.8" />
+</info>
+<algodata>
+</algodata>
+</vio>
+<vio rule="Power Via Density" index="4" rank="-1.000" longname="Power Via Density">
+<info>
+<param name="Rank" value="-1.000" />
+<param name="Index" value="4" />
+<param name="Net" value="GND_Highside" />
+<param name="Layer1" value="Layer 1" type="LAYER" />
+<param name="Layer2" value="Layer 2" type="LAYER" />
+<param name="Number of Vias" value="0" />
+<param name="Grid Location" type="BOX" x1="0" y1="25.4" x2="25.4" y2="50.8" />
+</info>
+<algodata>
+</algodata>
+</vio>
+<vio rule="Power Via Density" index="5" rank="-1.000" longname="Power Via Density">
+<info>
+<param name="Rank" value="-1.000" />
+<param name="Index" value="5" />
+<param name="Net" value="GND_Highside" />
+<param name="Layer1" value="Layer 2" type="LAYER" />
+<param name="Layer2" value="Bottom Layer" type="LAYER" />
+<param name="Number of Vias" value="0" />
+<param name="Grid Location" type="BOX" x1="0" y1="25.4" x2="25.4" y2="50.8" />
+</info>
+<algodata>
+</algodata>
+</vio>
+</rule>
+<rule name="Disparate Reference Overlap">
+</rule>
+</ruletype>
+<ruletype name="Placement">
+<rule name="I/O Filter Distance to I/O Connector">
+</rule>
+<rule name="Distance from Oscillator to Clock Driver">
+</rule>
+</ruletype>
+</emsatAnalysis>

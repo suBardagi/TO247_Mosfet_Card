@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title></title>
+  <style type="text/css">
+    <!--
+  BODY {background-color: ghostwhite; font-family:Lucida, Times, "New Century Schoolbook", Times, serif}
+  H1 {color: blue}
+  H1 I {color: blue font-style: italic}
+  H3 {color: black}
+  B I {color: blue; font-style: italic}
+  EM {color: green}
+  P {color: black}
+  P EM {color: red}
+  BR {line-height: 50%}
+  TD {color: black}
+  CODE {color: green; font-family: "Lucida Typewriter", Courier, Fixed, monospace; line-height: 120%}
+  PRE {color: black; font-family: Courier, Fixed, "Lucida Typewriter", monospace;font-size: 12pt}
+  UL {margin-left: 10%}
+  LI {list-style-image: url(gifs/bullet.gif); list-style-type: circle}
+  -->
+  </style>
+  </head>
+
+  <body>
+    <h1></h1>
+
+<h1> Critical Net Changing Reference Plane </h1>
+<h3> Introduction </h3>
+  <p>
+The output from Rule 2 is divided into three parts. Part A shows nets found that have more than the 'Number of Vias Allowed on Net'. Part B shows any of the vias in violation from Part A that do not have enough capacitors or vias connecting the two reference planes within an allowable distance. Part C shows if any of the vias from Part A cause return currents in other vias to exceed the 'Max Current Limit' specified.
+  </p>
+  <p>
+<b> Settings Set in the Profile: </b>
+  </p>
+  <table cellspacing="5">
+
+    <tr>
+      <td> Individual HTML Output Files </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Units </td><td> mm </td>
+    </tr>
+
+    <tr>
+      <td> Sort Changing Reference Violation by Column </td><td> INDEX </td>
+    </tr>
+
+    <tr>
+      <td> Sort Capacitor/Via Violation by Column </td><td> INDEX </td>
+    </tr>
+
+    <tr>
+      <td> Sort Overused Via Violation by Column </td><td> NET </td>
+    </tr>
+
+    <tr>
+      <td> Overused Return Vias </td><td> NO </td>
+    </tr>
+
+    <tr>
+      <td> Max Current Limit </td><td> 2.0 </td>
+    </tr>
+
+    <tr>
+      <td> Weighting Factor </td><td> 1.0 </td>
+    </tr>
+
+    <tr>
+      <td> Recognize Dual Plane Reference Within </td><td> 0.0508 </td>
+    </tr>
+
+    <tr>
+      <td> Allow Partial Reference Plane Change </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Check for Plane Decoupling </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Include ALL Reference Plane Changes </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Number of Vias Allowed on Net </td><td> 0 </td>
+    </tr>
+
+    <tr>
+      <td> Allow Via Close to IC </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Max Distance from IC to Ignored Via </td><td> 12.7 </td>
+    </tr>
+
+    <tr>
+      <td> Use Point-to-Point Distance from IC to Via </td><td> NO </td>
+    </tr>
+
+    <tr>
+      <td> Allow Via Connection Between Reference Planes </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Allow Complex Via Connections (Jogging) Between Planes </td><td> NO </td>
+    </tr>
+
+    <tr>
+      <td> Num of Decoupling Caps Required Within Smaller Radius </td><td> 2 </td>
+    </tr>
+
+    <tr>
+      <td> Num of Vias Required Within Smaller Radius </td><td> 2 </td>
+    </tr>
+
+    <tr>
+      <td> Small Radius Allowable Capacitor Distance </td><td> 6.35 </td>
+    </tr>
+
+    <tr>
+      <td> Small Radius Allowable Via Distance </td><td> 8.89 </td>
+    </tr>
+
+    <tr>
+      <td> Num of Decoupling Caps Required Within Larger Radius </td><td> 3 </td>
+    </tr>
+
+    <tr>
+      <td> Num of Vias Required Within Larger Radius </td><td> 3 </td>
+    </tr>
+
+    <tr>
+      <td> Large Radius Allowable Capacitor Distance </td><td> 10.16 </td>
+    </tr>
+
+    <tr>
+      <td> Large Radius Allowable Via Distance </td><td> 12.7 </td>
+    </tr>
+
+    <tr>
+      <td> Additional Search Range Percent </td><td> 100 </td>
+    </tr>
+
+    <tr>
+      <td> Force All Plane Combinations to Be Decoupled </td><td> NO </td>
+    </tr>
+
+    <tr>
+      <td> Net Choice </td><td> CRITICAL </td>
+    </tr>
+
+  </table>
+  <p>
+<b> NOTE: The components are the decoupling caps found and the numbers under the MSGs  </b><b> are the corresponding distances from the cap to the via, respectively. </b>
+  </p>
+<h3> Results: </h3>
+  <table cellspacing="5">
+
+    <tr>
+      <th valign=center align=left> INDEX </th><th valign=center align=left> NET </th><th valign=center align=left> VIA </th><th valign=center align=left> REF PLANE 1 </th><th valign=center align=left> REF PLANE 2 </th><th valign=center align=left> SIG LAYER 1 </th><th valign=center align=left> SIG LAYER 2 </th><th valign=center align=left> VIAS FOUND </th><th valign=center align=left> CAPS FOUND </th><th valign=center align=left> INFO </th><th valign=center align=left> CAP/VIA DISTANCES </th><th valign=center align=left> RANK </th>
+    </tr>
+
+  </table>
+  <p>
+<b> Number of Violations:	0 </b>
+  </p>
+  <p>
+<b> Number Analyzed:	0 </b>
+  </p>
+<hr>
+    <hr>
+<p>
+  File Created On : Mon Oct  6 20:14:45 2025
+<br>
+  File Created By : Ansys EMI Scanner 2024 R2
+</p>
+  </body>
+</html>

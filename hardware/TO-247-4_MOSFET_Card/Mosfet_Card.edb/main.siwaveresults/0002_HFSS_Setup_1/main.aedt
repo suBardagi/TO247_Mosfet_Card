@@ -1,0 +1,2333 @@
+$begin 'AnsoftProject'
+	Created='Mon Oct  6 20:15:42 2025'
+	Product='ElectronicsDesktop'
+	FileOwnedByWorkbench=false
+	$begin 'Desktop'
+		Version(2024, 2)
+		InfrastructureVersion(1, 0)
+		$begin 'FactoryHeader'
+			$begin 'geometry3deditor'
+				KernelVersion(2, 0)
+				ProjectContainsGeometry3D='0'
+			$end 'geometry3deditor'
+		$end 'FactoryHeader'
+	$end 'Desktop'
+	UsesAdvancedFeatures=false
+	NextUniqueID=0
+	MoveBackwards=false
+	$begin 'HFSSEnvironment'
+		Version(1, 0)
+	$end 'HFSSEnvironment'
+	$begin 'PlanarEMEnvironment'
+		Version(1, 0)
+	$end 'PlanarEMEnvironment'
+	$begin 'Q3DEnvironment'
+		Version(1, 0)
+	$end 'Q3DEnvironment'
+	$begin '2DExtractorEnvironment'
+		Version(1, 0)
+	$end '2DExtractorEnvironment'
+	$begin 'NexximEnvironment'
+		Version(1, 0)
+	$end 'NexximEnvironment'
+	$begin 'NexximNetlistEnvironment'
+		Version(1, 0)
+	$end 'NexximNetlistEnvironment'
+	$begin 'EmitEnvironment'
+		Version(1, 0)
+	$end 'EmitEnvironment'
+	$begin 'Maxwell3DEnvironment'
+		Version(1, 0)
+	$end 'Maxwell3DEnvironment'
+	$begin 'Maxwell2DEnvironment'
+		Version(1, 0)
+	$end 'Maxwell2DEnvironment'
+	$begin 'RMxprtEnvironment'
+		Version(1, 0)
+	$end 'RMxprtEnvironment'
+	$begin 'MaxCirEnvironment'
+		Version(1, 0)
+	$end 'MaxCirEnvironment'
+	$begin 'SimplorerEnvironment'
+		Version(1, 0)
+	$end 'SimplorerEnvironment'
+	$begin 'IcepakEnvironment'
+		Version(1, 0)
+	$end 'IcepakEnvironment'
+	$begin 'MechanicalEnvironment'
+		Version(1, 0)
+	$end 'MechanicalEnvironment'
+	$begin 'SchematicEnvironment'
+		Version(1, 0)
+	$end 'SchematicEnvironment'
+	$begin 'geometry3deditor'
+		Version(1, 0)
+	$end 'geometry3deditor'
+	ReadVersion=12
+	$begin 'EDB'
+		Path=''
+		LastUpdateTimeStamp=1759770965
+	$end 'EDB'
+	$begin 'DesignMgrEnvironment'
+		CompInstCounter=1
+		GPortCounter=0
+		NetCounter=0
+		Alias('Ieee;Simplorer Elements\\Ieee', 'Std;Simplorer Elements\\Std', 'Basic_VHDLAMS;Simplorer Elements\\Basic Elements VHDLAMS\\Basic Elements VHDLAMS', 'Digital_Elements;Simplorer Elements\\Digital Elements\\Digital Elements', 'Transformations;Simplorer Elements\\Tools\\Transformations\\Transformations', 'HEV_VHDLAMS;Simplorer Elements\\HEV VHDLAMS\\HEV VHDLAMS', 'automotive_vda;Simplorer Elements\\VDALibs VHDLAMS\\automotive_vda', 'example_boardnet;Simplorer Elements\\VDALibs VHDLAMS\\example_boardnet', 'example_ecar;Simplorer Elements\\VDALibs VHDLAMS\\example_ecar', 'fundamentals_vda;Simplorer Elements\\VDALibs VHDLAMS\\fundamentals_vda', 'hybrid_emc_vda;Simplorer Elements\\VDALibs VHDLAMS\\hybrid_emc_vda', 'megma;Simplorer Elements\\VDALibs VHDLAMS\\megma', 'modelica_rotational;Simplorer Elements\\VDALibs VHDLAMS\\modelica_rotational', 'modelica_thermal;Simplorer Elements\\VDALibs VHDLAMS\\modelica_thermal', 'modelica_translational;Simplorer Elements\\VDALibs VHDLAMS\\modelica_translational', 'spice2vhd;Simplorer Elements\\VDALibs VHDLAMS\\spice2vhd', 'spice2vhd_devices;Simplorer Elements\\VDALibs VHDLAMS\\spice2vhd_devices', 'aircraft_electrical_vhdlams;Simplorer Elements\\Aircraft Electrical VHDLAMS\\Aircraft Electrical VHDLAMS', 'power_system_vhdlams;Simplorer Elements\\Power System VHDLAMS\\Power System VHDLAMS')
+	$end 'DesignMgrEnvironment'
+	$begin 'ProjectDatasets'
+		NextUniqueID=0
+		MoveBackwards=false
+		DatasetType='ProjectDatasetType'
+		$begin 'DatasetDefinitions'
+		$end 'DatasetDefinitions'
+	$end 'ProjectDatasets'
+	VariableOrders[0:]
+	$begin 'Definitions'
+		$begin 'Materials'
+			$begin 'Ceramic_material'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permittivity='4.4'
+				dielectric_loss_tangent='0.02'
+				thermal_conductivity='15'
+				mass_density='3970'
+				specific_heat='910'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'Ceramic_material'
+			$begin 'copper'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permeability='1'
+				conductivity='58004640.3712297'
+				thermal_conductivity='400'
+				mass_density='8933'
+				specific_heat='385'
+				thermal_expansion_coefficient='1.77e-05'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'copper'
+			$begin 'FR-4'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permittivity='4.8'
+				dielectric_loss_tangent='0'
+				thermal_conductivity='0.35'
+				mass_density='1250'
+				specific_heat='1300'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'FR-4'
+			$begin 'FR4_epoxy'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permittivity='4.4'
+				dielectric_loss_tangent='0.02'
+				thermal_conductivity='0.294'
+				mass_density='1900'
+				specific_heat='1150'
+				thermal_expansion_coefficient='1.5e-05'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'FR4_epoxy'
+			$begin 'pec'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permeability='1'
+				conductivity='1e+30'
+				thermal_conductivity='400'
+				mass_density='8933'
+				specific_heat='385'
+				thermal_expansion_coefficient='1.77e-05'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'pec'
+			$begin 'PP-006'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permittivity='4.1'
+				dielectric_loss_tangent='0.02'
+				thermal_conductivity='0.294'
+				mass_density='1900'
+				specific_heat='1150'
+				thermal_expansion_coefficient='1.5e-05'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'PP-006'
+			$begin 'solder'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				permeability='1'
+				conductivity='7000000'
+				thermal_conductivity='48'
+				mass_density='8000'
+				specific_heat='167'
+				thermal_expansion_coefficient='1.59e-06'
+				ModTime=1759770938
+				Library='Materials'
+				LibLocation='Project'
+				ModSinceLib=false
+			$end 'solder'
+			$begin 'air'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal')
+				$end 'PhysicsTypes'
+				$begin 'AttachedData'
+					$begin 'MatAppearanceData'
+						property_data='appearance_data'
+						Red=230
+						Green=230
+						Blue=230
+						Transparency=0.949999988079071
+					$end 'MatAppearanceData'
+				$end 'AttachedData'
+				permittivity='1.0006'
+				permeability='1.0000004'
+				thermal_conductivity='0.0261'
+				mass_density='1.1614'
+				specific_heat='1005'
+				thermal_expansion_coefficient='0.00333'
+				$begin 'thermal_material_type'
+					property_type='ChoiceProperty'
+					Choice='Fluid'
+				$end 'thermal_material_type'
+				diffusivity='2.88e-05'
+				molecular_mass='0.028966'
+				viscosity='1.84e-05'
+				material_refractive_index='1.000293'
+				$begin 'clarity_type'
+					property_type='ChoiceProperty'
+					Choice='Transparent'
+				$end 'clarity_type'
+				ModTime=1592011950
+				Library='Materials'
+				LibLocation='SysLibrary'
+				ModSinceLib=false
+			$end 'air'
+			$begin 'vacuum'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic')
+				$end 'PhysicsTypes'
+				$begin 'AttachedData'
+					$begin 'MatAppearanceData'
+						property_data='appearance_data'
+						Red=230
+						Green=230
+						Blue=230
+						Transparency=0.949999988079071
+					$end 'MatAppearanceData'
+				$end 'AttachedData'
+				permittivity='1'
+				ModTime=1499970477
+				Library='Materials'
+				LibLocation='SysLibrary'
+				ModSinceLib=false
+			$end 'vacuum'
+		$end 'Materials'
+		$begin 'SurfaceMaterials'
+		$end 'SurfaceMaterials'
+		$begin 'Scripts'
+		$end 'Scripts'
+		$begin 'Symbols'
+			$begin '0.1_?F'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '0.1_?F'
+			$begin '0.22_?F'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '0.22_?F'
+			$begin '0_Ohms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '0_Ohms'
+			$begin '1.2_kOhms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '1.2_kOhms'
+			$begin '1000pF'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '1000pF'
+			$begin '100_?F'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '100_?F'
+			$begin '10_?F'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '10_?F'
+			$begin '10_Ohms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '10_Ohms'
+			$begin '1_?F'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '1_?F'
+			$begin '1_kOhms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '1_kOhms'
+			$begin '1uF'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '1uF'
+			$begin '3.3_kOhms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '3.3_kOhms'
+			$begin '330_Ohms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '330_Ohms'
+			$begin '4.7_?F'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '4.7_?F'
+			$begin '56_Ohms'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '56_Ohms'
+			$begin '6.8_?H'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=false
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('2', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '2', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '2', false, false, ExtentRect(0, 0, 0, 0, -0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('1', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(0.00508, 0.000635, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, 0.00508, 0.00151694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, -0.00211666666666667, 0, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end '6.8_?H'
+			$begin 'Hole_3.3mm_x_9mm'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=true
+				InitialLevels(0, 1)
+				$begin 'PinDef'
+					Pin('1', -0.00254, 0.00254, 0, 'N', 0, 0.00254, false, 0, true, '', true, false, '1', true)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, 1, Text(-0.00254, 0.003175, 0, 4, 5, false, 'Arial', 0, '1', false, false, ExtentRect(0, 0, 0, 0, -0.00254, 0.00405694444444797, 0.000835526315792816, 0.00176388888889594, 0, 0, 0)))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0.00254, 0.00254, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, 0.000423333333333333, 0.00254, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end 'Hole_3.3mm_x_9mm'
+			$begin 'main'
+				ModTime=1759770942
+				CE=0
+				Library=''
+				ModSinceLib=false
+				LibLocation='Project'
+				HighestLevel=1
+				Normalize=true
+				InitialLevels(0, 1)
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0.00254, 0.00254, 0.00508, 0.00508, 0, 0, 0)
+					Rect(0, 1, 0, 0, 0.000423333333333333, 0.00254, 0.000423333333333333, 0.000423333333333334, 0, 0, 0)
+				$end 'Graphics'
+			$end 'main'
+		$end 'Symbols'
+		$begin 'DefInfo'
+			'0.1_?F'(1002, 0, 0, 2, '', 1759770942, '', '0.1_?F', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'0.22_?F'(1002, 0, 0, 2, '', 1759770942, '', '0.22_?F', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'0_Ohms'(1002, 0, 0, 2, '', 1759770942, '', '0_Ohms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'1.2_kOhms'(1002, 0, 0, 2, '', 1759770942, '', '1.2_kOhms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'1000pF'(1002, 0, 0, 2, '', 1759770942, '', '1000pF', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'100_?F'(1002, 0, 0, 2, '', 1759770942, '', '100_?F', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'10_?F'(1002, 0, 0, 2, '', 1759770942, '', '10_?F', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'10_Ohms'(1002, 0, 0, 2, '', 1759770942, '', '10_Ohms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'1_?F'(1002, 0, 0, 2, '', 1759770942, '', '1_?F', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'1_kOhms'(1002, 0, 0, 2, '', 1759770942, '', '1_kOhms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'1uF'(1002, 0, 0, 2, '', 1759770942, '', '1uF', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'3.3_kOhms'(1002, 0, 0, 2, '', 1759770942, '', '3.3_kOhms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'330_Ohms'(1002, 0, 0, 2, '', 1759770942, '', '330_Ohms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'4.7_?F'(1002, 0, 0, 2, '', 1759770942, '', '4.7_?F', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'56_Ohms'(1002, 0, 0, 2, '', 1759770942, '', '56_Ohms', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'6.8_?H'(1002, 0, 0, 2, '', 1759770942, '', '6.8_?H', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			'Hole_3.3mm_x_9mm'(1002, 0, 0, 1, '', 1759770942, '', 'Hole_3.3mm_x_9mm', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+			main(1002, 0, 16, 0, '', 1759770942, '', 'main', '', '', '', '', '', '', '', 'Project', '', '', 1759770942, '', 0, 0)
+		$end 'DefInfo'
+		$begin 'Compdefs'
+			$begin '0.1_?F'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 0, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 1, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '0.1_?F'
+			$begin '0.22_?F'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 2, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 3, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '0.22_?F'
+			$begin '0_Ohms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 4, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 5, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '0_Ohms'
+			$begin '1.2_kOhms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 6, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 7, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '1.2_kOhms'
+			$begin '1000pF'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 8, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 9, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '1000pF'
+			$begin '100_?F'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 10, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 11, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '100_?F'
+			$begin '10_?F'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 12, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 13, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '10_?F'
+			$begin '10_Ohms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 14, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 15, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '10_Ohms'
+			$begin '1_?F'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 16, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 17, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '1_?F'
+			$begin '1_kOhms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 18, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 19, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '1_kOhms'
+			$begin '1uF'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 20, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 21, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '1uF'
+			$begin '3.3_kOhms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 22, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 23, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '3.3_kOhms'
+			$begin '330_Ohms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 24, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 25, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '330_Ohms'
+			$begin '4.7_?F'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 26, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 27, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '4.7_?F'
+			$begin '56_Ohms'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 28, 1, '', 'Electrical', '0')
+				Terminal('2', '', 'A', false, 29, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '56_Ohms'
+			$begin '6.8_?H'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('2', '', 'A', false, 30, 1, '', 'Electrical', '0')
+				Terminal('1', '', 'A', false, 31, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end '6.8_?H'
+			$begin 'Hole_3.3mm_x_9mm'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				Terminal('1', '', 'A', false, 32, 1, '', 'Electrical', '0')
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end 'Hole_3.3mm_x_9mm'
+			$begin 'main'
+				Library=''
+				CircuitEnv=0
+				Refbase='U'
+				NumParts=1
+				ModSinceLib=true
+				$begin 'Properties'
+					TextProp('Representation', 'D', '', 'main')
+				$end 'Properties'
+				CompExtID=1
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'D', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'D', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+				$begin 'CosimDefinitions'
+					$begin 'CosimDefinition'
+						CosimulatorType=4
+						CosimDefName='DefaultNetlist'
+						IsDefinition=true
+						Connect=true
+						Data()
+						GRef()
+					$end 'CosimDefinition'
+					DefaultCosim='DefaultNetlist'
+				$end 'CosimDefinitions'
+			$end 'main'
+		$end 'Compdefs'
+	$end 'Definitions'
+	DesignIDServer=2
+	MoveBackwards=false
+	$begin 'PlanarEMCircuit'
+		RepRewriteV2=true
+		Name='main'
+		DesignID=0
+		$begin 'Circuit'
+			ComponentName='main'
+			AutoFP=''
+			$begin 'DesignDatasets'
+				NextUniqueID=0
+				MoveBackwards=false
+				DatasetType='DesignDatasetType'
+				$begin 'DatasetDefinitions'
+				$end 'DatasetDefinitions'
+			$end 'DesignDatasets'
+			VariableOrders[0:]
+			$begin 'Net'
+				NetName='+12V'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='+15V_Highside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='+15V_Lowside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='+5V'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='Gate_Highside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='Gate_Lowside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='GND'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='GND_Highside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='GND_Lowside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='GNDPWR'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='HVBUS'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetC2_2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetC7_2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetD1_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetD2_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetD3_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetD4_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR12_2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR13_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR14_2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR15_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR6_2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR7_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR8_2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='NetR9_1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='OUTLINES'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='PWM_Highside_N'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='PWM_Highside_P'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='PWM_Lowside_N'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='PWM_Lowside_P'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='Source_Highside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='Source_Lowside'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+			$begin 'Net'
+				NetName='SW'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+			$end 'Net'
+		$end 'Circuit'
+		$begin 'Layout'
+			BlackBox=false
+			DefUnits='mm'
+			NIdx=240
+			ActLyr='Top Layer'
+			Tol(1e-08, 1e-08, 1e-12)
+			$begin 'HfssExportInfo'
+				ScriptFileName=''
+				HfssFileName=''
+				Version=2
+				ExtentType='BboxExtent'
+				BasePolygon=''
+				BasePolygonEDBUId=-1
+				DielExtentType='BboxExtent'
+				DielBasePolygon=''
+				DielBasePolygonEDBUId=-1
+				DielExt(Ext='0.005', Dim=false)
+				HonorUserDiel=true
+				Include3D=false
+				TruncAtGnd=false
+				AirHorExt(Ext='0.15', Dim=false)
+				AirPosZExt(Ext='2', Dim=false)
+				AirNegZExt(Ext='2', Dim=false)
+				SyncZExt=true
+				OpenRegionType='Radiation'
+				UseRadBound=true
+				PMLVisible=false
+				OperFreq='5GHz'
+				RadLvl=0
+				UseStackupForZExtFact=true
+				Smooth=true
+			$end 'HfssExportInfo'
+		$end 'Layout'
+		$begin 'Port'
+			$begin 'Data'
+			$end 'Data'
+			$begin 'CoupledPortsList'
+			$end 'CoupledPortsList'
+			$begin 'DiffPairs'
+			$end 'DiffPairs'
+			TotalVoltage=false
+			IncludePortPostProcess=true
+			$begin 'SortOrder'
+			$end 'SortOrder'
+			LegacySolverPinOrdering=false
+		$end 'Port'
+		$begin 'Boundary'
+			$begin 'Data'
+			$end 'Data'
+			$begin 'CoupledPortsList'
+			$end 'CoupledPortsList'
+			$begin 'DiffPairs'
+			$end 'DiffPairs'
+			TotalVoltage=false
+			IncludePortPostProcess=true
+			$begin 'SortOrder'
+			$end 'SortOrder'
+			LegacySolverPinOrdering=false
+		$end 'Boundary'
+		$begin 'Cavity'
+			$begin 'Data'
+			$end 'Data'
+		$end 'Cavity'
+		$begin 'LayoutVia'
+			$begin 'Data'
+			$end 'Data'
+		$end 'LayoutVia'
+		$begin 'Source'
+			$begin 'Data'
+			$end 'Data'
+		$end 'Source'
+		$begin 'Voltage Probe'
+			$begin 'Data'
+			$end 'Data'
+		$end 'Voltage Probe'
+		$begin 'DC Terminal'
+			$begin 'Data'
+			$end 'Data'
+		$end 'DC Terminal'
+		$begin 'CircuitSources'
+			$begin 'Data'
+			$end 'Data'
+		$end 'CircuitSources'
+		$begin 'NexximPorts'
+			$begin 'Data'
+			$end 'Data'
+			$begin 'DiffPairs'
+			$end 'DiffPairs'
+		$end 'NexximPorts'
+		$begin 'SortOrder'
+		$end 'SortOrder'
+		$begin 'NexximMultiComponentContainers'
+			$begin 'Data'
+			$end 'Data'
+		$end 'NexximMultiComponentContainers'
+		$begin 'ComponentConfigurationData'
+			$begin 'EnabledPorts'
+			$end 'EnabledPorts'
+			$begin 'EnabledMultipleComponents'
+			$end 'EnabledMultipleComponents'
+			$begin 'EnabledAnalyses'
+			$end 'EnabledAnalyses'
+		$end 'ComponentConfigurationData'
+		$begin 'Properties'
+		$end 'Properties'
+		$begin 'CustomSimSetups'
+			$begin 'Data'
+			$end 'Data'
+		$end 'CustomSimSetups'
+		$begin 'RadSetup'
+			$begin 'Data'
+			$end 'Data'
+		$end 'RadSetup'
+		$begin 'Setup'
+			$begin 'Data'
+				$begin 'EMI Scan Sim 1'
+					DataId='Setup0'
+					$begin 'Properties'
+						Enable='true'
+					$end 'Properties'
+					SimSetupID=0
+					SolveSetupType='SIwaveEMI'
+					SolutionID=2
+				$end 'EMI Scan Sim 1'
+				$begin 'HFSS Setup 1'
+					DataId='Setup1'
+					$begin 'Properties'
+						Enable='true'
+					$end 'Properties'
+					SimSetupID=3
+					AutoSetup=true
+					SliderType='Balanced'
+					ElementType='Tets'
+					SolveSetupType='HFSS'
+					PercentRefinementPerPass=30
+					MinNumberOfPasses=1
+					MinNumberOfConvergedPasses=1
+					UseDefaultLambda=true
+					UseMaxRefinement=false
+					MaxRefinement=1000000
+					UseMeshRegion=false
+					MeshRegionName=''
+					UseParallelRefinement=false
+					UseMeshFusionForFlex=false
+					SaveAdaptiveCurrents=false
+					SaveLastAdaptiveRadFields=false
+					UseConvergenceMatrix=false
+					AllEntries=false
+					AllDiagEntries=false
+					AllOffDiagEntries=false
+					MagMinThreshold=0.01
+					ProdMajVerID=-1
+					ProjDesignSetup=''
+					ProdMinVerID=-1
+					Refine=false
+					Frequency='10GHz'
+					LambdaRefine=true
+					MeshSizeFactor=10
+					QualityRefine=true
+					MinAngle='15deg'
+					UniformityRefine=false
+					MaxRatio=2
+					Smooth=false
+					SmoothingPasses=5
+					UseEdgeMesh=false
+					UseEdgeMeshAbsLength=false
+					EdgeMeshRatio=0.1
+					EdgeMeshAbsLength='1000mm'
+					LayerProjectThickness='0meter'
+					UseDefeature=true
+					UseDefeatureAbsLength=false
+					DefeatureRatio=1e-06
+					DefeatureAbsLength='0mm'
+					InfArrayDimX=0
+					InfArrayDimY=0
+					InfArrayOrigX=0
+					InfArrayOrigY=0
+					InfArraySkew=0
+					ViaNumSides=6
+					ViaMaterial='copper'
+					Style25DVia='Mesh'
+					ViaMeshPlating=false
+					FastTXLines=false
+					Replace3DTriangles=true
+					LayerSnapTol='1e-05'
+					ViaDensity=0
+					HfssMesh=true
+					ElementType=0
+					Q3dPostProc=0
+					UnitFactor=1000
+					Verbose=false
+					NumberOfProcessors=0
+					SmallVoidArea=-4e-08
+					RemoveFloatingGeometry=false
+					UseMeshFusionForFlex=false
+					HealingOption=1
+					InclBBoxOption=1
+					ModelType=0
+					ICModeAuto=1
+					ICModeLength='50nm'
+					WriteOptions=0
+					ViaAreaCutoffCircElems=0
+					$begin 'AuxBlock'
+					$end 'AuxBlock'
+					DoAdaptive=true
+					Color(R=0, G=0, B=0)
+					$begin 'AdvancedSettings'
+						AccuracyLevel=2
+						GapPortCalibration=true
+						ReferenceLengthRatio=0.25
+						RefineAreaRatio=4
+						DRCOn=false
+						FastSolverOn=false
+						StartFastSolverAt=3000
+						LoopTreeOn=true
+						SingularElementsOn=false
+						UseStaticPortSolver=false
+						UseThinMetalPortSolver=false
+						ComputeBothEvenAndOddCPWModes=false
+						ZeroMetalLayerThickness=0
+						ThinDielectric=0
+						UseShellElements=false
+						ViaAreaCutoffCircElems='0'
+						SVDHighCompression=false
+						NumProcessors=1
+						SolverType='Direct Solver'
+						UseHfssMUMPSSolver=true
+						RelativeResidual=1e-06
+						EnhancedLowFreqAccuracy=false
+						OrderBasis=1
+						MaxDeltaZo=2
+						UseRadBoundaryOnPorts=false
+						SetTrianglesForWavePort=false
+						MinTrianglesForWavePort=100
+						MaxTrianglesForWavePort=500
+						numprocessorsdistrib=1
+						CausalMaterials=true
+						enabledsoforopti=true
+						usehfsssolvelicense=false
+						CircuitSparamDefinition=false
+						CircuitIntegrationType='FFT'
+						DesignType='Generic'
+						MeshingMethod='Phi'
+						EnableDesignIntersectionCheck=true
+						UseAlternativeMeshMethodsAsFallBack=true
+						ModeOption='General mode'
+						BroadbandFreqOption='AutoMaxFreq'
+						BroadbandMaxNumFreq=5
+						SaveADP=false
+						UseAdvancedDCExtrap=false
+						PhiMesherDeltaZRatio=100000
+					$end 'AdvancedSettings'
+					$begin 'CurveApproximation'
+						ArcAngle='30deg'
+						StartAzimuth='0deg'
+						UseError=false
+						Error='0mm'
+						MaxPoints=8
+						UnionPolys=true
+						Replace3DTriangles=true
+					$end 'CurveApproximation'
+					$begin 'Q3D_DCSettings'
+						SolveResOnly=true
+						$begin 'Cond'
+							MaxPass=10
+							MinPass=1
+							MinConvPass=1
+							PerError=1
+							PerRefine=30
+						$end 'Cond'
+						$begin 'Mult'
+							MaxPass=1
+							MinPass=1
+							MinConvPass=1
+							PerError=1
+							PerRefine=30
+						$end 'Mult'
+						AccuracyLevel='Normal'
+					$end 'Q3D_DCSettings'
+					$begin 'Data'
+						$begin 'HFSS Sweep 1'
+							DataId='Sweep0'
+							$begin 'Properties'
+								Enable='true'
+							$end 'Properties'
+							Frequencies('0Hz', '100000000Hz', '200000000Hz', '300000000Hz', '400000000Hz', '500000000Hz', '600000000Hz', '700000000Hz', '800000000Hz', '900000000Hz', '1000000000Hz', '1100000000Hz', '1200000000Hz', '1300000000Hz', '1400000000Hz', '1500000000Hz', '1600000000Hz', '1700000000Hz', '1800000000Hz', '1900000000Hz', '2000000000Hz', '2100000000Hz', '2200000000Hz', '2300000000Hz', '2400000000Hz', '2500000000Hz', '2600000000Hz', '2700000000Hz', '2800000000Hz', '2900000000Hz', '3000000000Hz', '3100000000Hz', '3200000000Hz', '3300000000Hz', '3400000000Hz', '3500000000Hz', '3600000000Hz', '3700000000Hz', '3800000000Hz', '3900000000Hz', '4000000000Hz', '4100000000Hz', '4200000000Hz', '4300000000Hz', '4400000000Hz', '4500000000Hz', '4600000000Hz', '4700000000Hz', '4800000000Hz', '4900000000Hz', '5000000000Hz', '5100000000Hz', '5200000000Hz', '5300000000Hz', '5400000000Hz', '5500000000Hz', '5600000000Hz', '5700000000Hz', '5800000000Hz', '5900000000Hz', '6000000000Hz', '6100000000Hz', '6200000000Hz', '6300000000Hz', '6400000000Hz', '6500000000Hz', '6600000000Hz', '6700000000Hz', '6800000000Hz', '6900000000Hz', '7000000000Hz', '7100000000Hz', '7200000000Hz', '7300000000Hz', '7400000000Hz', '7500000000Hz', '7600000000Hz', '7700000000Hz', '7800000000Hz', '7900000000Hz', '8000000000Hz', '8100000000Hz', '8200000000Hz', '8300000000Hz', '8400000000Hz', '8500000000Hz', '8600000000Hz', '8700000000Hz', '8800000000Hz', '8900000000Hz', '9000000000Hz', '9100000000Hz', '9200000000Hz', '9300000000Hz', '9400000000Hz', '9500000000Hz', '9600000000Hz', '9700000000Hz', '9800000000Hz', '9900000000Hz', '10000000000Hz', '10100000000Hz', '10200000000Hz', '10300000000Hz', '10400000000Hz', '10500000000Hz', '10600000000Hz', '10700000000Hz', '10800000000Hz', '10900000000Hz', '11000000000Hz', '11100000000Hz', '11200000000Hz', '11300000000Hz', '11400000000Hz', '11500000000Hz', '11600000000Hz', '11700000000Hz', '11800000000Hz', '11900000000Hz', '12000000000Hz', '12100000000Hz', '12200000000Hz', '12300000000Hz', '12400000000Hz', '12500000000Hz', '12600000000Hz', '12700000000Hz', '12800000000Hz', '12900000000Hz', '13000000000Hz', '13100000000Hz', '13200000000Hz', '13300000000Hz', '13400000000Hz', '13500000000Hz', '13600000000Hz', '13700000000Hz', '13800000000Hz', '13900000000Hz', '14000000000Hz', '14100000000Hz', '14200000000Hz', '14300000000Hz', '14400000000Hz', '14500000000Hz', '14600000000Hz', '14700000000Hz', '14800000000Hz', '14900000000Hz', '15000000000Hz', '15100000000Hz', '15200000000Hz', '15300000000Hz', '15400000000Hz', '15500000000Hz', '15600000000Hz', '15700000000Hz', '15800000000Hz', '15900000000Hz', '16000000000Hz', '16100000000Hz', '16200000000Hz', '16300000000Hz', '16400000000Hz', '16500000000Hz', '16600000000Hz', '16700000000Hz', '16800000000Hz', '16900000000Hz', '17000000000Hz', '17100000000Hz', '17200000000Hz', '17300000000Hz', '17400000000Hz', '17500000000Hz', '17600000000Hz', '17700000000Hz', '17800000000Hz', '17900000000Hz', '18000000000Hz', '18100000000Hz', '18200000000Hz', '18300000000Hz', '18400000000Hz', '18500000000Hz', '18600000000Hz', '18700000000Hz', '18800000000Hz', '18900000000Hz', '19000000000Hz', '19100000000Hz', '19200000000Hz', '19300000000Hz', '19400000000Hz', '19500000000Hz', '19600000000Hz', '19700000000Hz', '19800000000Hz', '19900000000Hz', '20000000000Hz')
+							$begin 'Sweeps'
+								Variable='HFSS Sweep 1'
+								Data='LIN 0Hz 20GHz 100MHz'
+								OffsetF1=false
+								Synchronize=0
+							$end 'Sweeps'
+							SolutionID=7
+							GenerateSurfaceCurrent=false
+							SaveRadFieldsOnly=false
+							ZoSelected=false
+							SAbsError=0.005
+							ZoPercentError=1
+							GenerateStateSpace=false
+							EnforcePassivity=true
+							PassivityTolerance=0.0001
+							UseQ3DForDC=false
+							UseComputeDC=false
+							UseAdpSolutionForAllSweepFreq=false
+							ResimulateDC=false
+							MaxSolutions=250
+							InterpUseSMatrix=true
+							InterpUsePortImpedance=true
+							InterpUsePropConst=true
+							InterpUseFullBasis=true
+							AdvDCExtrapolation=false
+							MinSolvedFreq='0.01GHz'
+							AutoSMatOnlySolve=true
+							MinFreqSMatrixOnlySolve='1MHz'
+							CustomFrequencyString=''
+							AllEntries=false
+							AllDiagEntries=false
+							AllOffDiagEntries=false
+							MagMinThreshold=0.01
+							InterpMinSubranges=1
+							InterpMinSolutions=0
+							FreqSweepType='kInterpolating'
+						$end 'HFSS Sweep 1'
+					$end 'Data'
+					$begin 'MeshOps'
+					$end 'MeshOps'
+				$end 'HFSS Setup 1'
+			$end 'Data'
+		$end 'Setup'
+		$begin 'AnalysisOptionBlocks'
+		$end 'AnalysisOptionBlocks'
+		$begin 'EM properties'
+			$begin 'Data'
+			$end 'Data'
+		$end 'EM properties'
+		$begin 'OutputVariable'
+			NextUniqueID=0
+			MoveBackwards=false
+		$end 'OutputVariable'
+		$begin 'Optimetrics'
+			$begin 'OptimetricsSetups'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'OptimetricsSetups'
+		$end 'Optimetrics'
+		$begin 'FieldsReporter'
+			$begin 'FieldsCalculator'
+				Line_Discretization=1000
+				'Show Stack'=true
+			$end 'FieldsCalculator'
+			$begin 'PlotDefaults'
+				Default_SolutionId=2
+				Default_PlotFolder='Automatic'
+			$end 'PlotDefaults'
+			$begin 'FieldsPlotManagerID'
+				NextUniqueID=0
+				MoveBackwards=false
+				NumQuantityType=0
+				NumPlots=0
+			$end 'FieldsPlotManagerID'
+			$begin 'Report3dInGeomWnd'
+				Report3dNum=0
+			$end 'Report3dInGeomWnd'
+			$begin 'Report2dInGeomWnd'
+				Report2dNum=0
+			$end 'Report2dInGeomWnd'
+			$begin 'AntennaParametersInGeomWnd'
+				AntennaParametersNum=0
+			$end 'AntennaParametersInGeomWnd'
+			AntennaParametersPlotTablesOrder()
+			$begin 'EntitySelectionCache'
+			$end 'EntitySelectionCache'
+		$end 'FieldsReporter'
+		$begin 'SolutionManager'
+			$begin 'SimDataExtractors'
+				$begin 'ID Map'
+					$begin 'Setup'
+						N='EMI Scan Sim 1'
+						I=0
+						Soln(N='EMI Scan Sim 1', I=2)
+					$end 'Setup'
+					$begin 'Setup'
+						N='HFSS Setup 1'
+						I=3
+						Soln(N='Last Adaptive', I=4)
+						Soln(N='Adaptive Pass', I=5)
+						Soln(N='HFSS Sweep 1', I=7)
+					$end 'Setup'
+				$end 'ID Map'
+				$begin 'SimSetup'
+					TypeName='BaseSetup'
+					ID=0
+					Name='EMI Scan Sim 1'
+					$begin 'Solution'
+						ID=2
+						Name='EMI Scan Sim 1'
+						ImportedType=3
+						$begin 'SimDataExtractor'
+							$begin 'QuantityIDs'
+								NextUniqueID=0
+								MoveBackwards=false
+								IDMap()
+							$end 'QuantityIDs'
+						$end 'SimDataExtractor'
+					$end 'Solution'
+				$end 'SimSetup'
+				$begin 'SimSetup'
+					TypeName='BaseSetup'
+					ID=3
+					Name='HFSS Setup 1'
+					$begin 'Solution'
+						ID=4
+						Name='Last Adaptive'
+						ImportedType=3
+						$begin 'SimDataExtractor'
+							$begin 'QuantityIDs'
+								NextUniqueID=0
+								MoveBackwards=false
+								IDMap()
+							$end 'QuantityIDs'
+						$end 'SimDataExtractor'
+					$end 'Solution'
+					$begin 'Solution'
+						ID=5
+						Name='Adaptive Pass'
+						ImportedType=3
+						$begin 'SimDataExtractor'
+							$begin 'QuantityIDs'
+								NextUniqueID=0
+								MoveBackwards=false
+								IDMap()
+							$end 'QuantityIDs'
+						$end 'SimDataExtractor'
+					$end 'Solution'
+					$begin 'Solution'
+						ID=7
+						Name='HFSS Sweep 1'
+						ImportedType=3
+						$begin 'SimDataExtractor'
+							$begin 'QuantityIDs'
+								NextUniqueID=0
+								MoveBackwards=false
+								IDMap()
+							$end 'QuantityIDs'
+						$end 'SimDataExtractor'
+					$end 'Solution'
+				$end 'SimSetup'
+				$begin 'Version ID Map'
+					V=0
+					$begin 'Setup'
+						N='EMI Scan Sim 1'
+						V=0
+						Soln(N='EMI Scan Sim 1', V=0)
+					$end 'Setup'
+					$begin 'Setup'
+						N='HFSS Setup 1'
+						V=0
+						Soln(N='Last Adaptive', V=0)
+						Soln(N='Adaptive Pass', V=0)
+						Soln(N='HFSS Sweep 1', V=0)
+					$end 'Setup'
+				$end 'Version ID Map'
+			$end 'SimDataExtractors'
+		$end 'SolutionManager'
+		$begin 'InterfaceOptions'
+			SchematicEnabled=false
+			SaveBeforeSolving=true
+		$end 'InterfaceOptions'
+		$begin 'AdvancedSettings'
+			ComputeBothEvenAndOddCPWModes=false
+			CausalMaterials=true
+			MeshingMethod='Phi'
+			EnableDesignIntersectionCheck=true
+			UseAlternativeMeshMethodsAsFallBack=true
+			CircuitSparamDefinition=false
+			CircuitIntegrationType='FFT'
+			BroadbandFreqOption='AutoMaxFreq'
+			BroadbandMaxNumFreq=5
+			SaveADP=false
+			UseAdvancedDCExtrap=false
+			ModeOption='General mode'
+			PhiMesherDeltaZRatio=100000
+			SpiceType='TouchStone1.0'
+			EnforcePassivity=false
+			EnforceCausality=false
+			UseCommonGround=true
+			ShowGammaComments=false
+			Renormalize=true
+			RenormImpedance=50
+			FittingError=0.5
+			MaxPoles=10000
+			PassivityType='IteratedFittingOfPV'
+			ColumnFittingType='Matrix'
+			SSFittingType='FastFit'
+			RelativeErrorToleranc=false
+			EnsureAccurateZfit=true
+			TouchstoneFormat='MA'
+			TouchstoneUnits='GHz'
+			TouchStonePrecision=15
+			ExportAfterSolve=false
+			ExportDir=''
+		$end 'AdvancedSettings'
+		$begin 'CoSimOptions'
+			Override=false
+			Setup=''
+			OverrideSweep=false
+			Sweep=''
+			FrequencySweepType=0
+			Interpolate=false
+			YMatrix=true
+			AutoAlignPorts=false
+			Simulator=1
+			InterpAlg='auto'
+			Renormalize=false
+			RenormImpedance=50
+		$end 'CoSimOptions'
+		$begin 'TemperatureData'
+			IncludeTempDependence=false
+			EnableFeedback=false
+			Temperature='22cel'
+		$end 'TemperatureData'
+		$begin 'UserDefinedSolutionMgr'
+			NextUniqueID=1000000
+			MoveBackwards=false
+		$end 'UserDefinedSolutionMgr'
+		$begin 'DatasetSolutionMgr'
+			NextUniqueID=2000000
+			MoveBackwards=false
+		$end 'DatasetSolutionMgr'
+		Notes=$begin_cdata$ $end_cdata$
+		$begin 'AnimationSetups'
+		$end 'AnimationSetups'
+		CacheHeaderFile='HDR3F697996017597709424.tmp'
+	$end 'PlanarEMCircuit'
+	$begin 'DataInstances'
+		DesignEditor='TopLevel'
+		Refdes('0', 'U1')
+		$begin 'CompInstances'
+			$begin 'Compinst'
+				ID='0'
+				Status='Status'
+				CompName='main'
+				GatesInUse()
+				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '0')
+				$end 'Properties'
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'OHD', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'OHD', '', 'Edit', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+			$end 'Compinst'
+		$end 'CompInstances'
+		$begin 'Instance'
+			DesignEditor='main'
+			ID='0'
+			$begin 'PlanarEMItem'
+				Editor3D=true
+				$begin 'PostProcessing'
+					DesignInstanceID=1
+					$begin 'ReportSetup'
+						$begin 'ReportManager'
+							$begin 'Reports'
+							$end 'Reports'
+							NextUniqueID=0
+							MoveBackwards=false
+							$begin 'NextVersID'
+								NextUniqueID=0
+								MoveBackwards=false
+							$end 'NextVersID'
+						$end 'ReportManager'
+						$begin 'Reports'
+						$end 'Reports'
+						$begin 'ReportsWindowInfoList'
+						$end 'ReportsWindowInfoList'
+					$end 'ReportSetup'
+				$end 'PostProcessing'
+				$begin 'Properties'
+				$end 'Properties'
+				$begin 'UserDefinedDocument'
+					$begin 'Data'
+					$end 'Data'
+				$end 'UserDefinedDocument'
+			$end 'PlanarEMItem'
+			$begin 'TopLayout'
+				DefaultUnits='mm'
+				DefaultAngleUnits='deg'
+				MajorSize='10mm'
+				MinorSize='1mm'
+				PixelSnapTolerance=20
+				SnapAcrossHierarchy=true
+				SnapTargetVertex_on=true
+				SnapTargetEdgeCenter_on=true
+				SnapTargetObjCenter_on=true
+				SnapTargetEdge_on=false
+				SnapTargetElecConnection_on=true
+				SnapTargetIntersection_on=false
+				SnapTargetGrid_on=true
+				SnapSourceVertex_on=true
+				SnapSourceEdgeCenter_on=true
+				SnapSourceObjCenter_on=true
+				SnapSourceEdge_on=false
+				SnapSourceElecConnection_on=true
+				ConstrainToGrid=false
+				DirectionConstraint=0
+				defaultholesize='25mil'
+				anglesnap='5deg'
+				$begin 'NamingConvention'
+					OptionUseNamingConvention_PadPort=false
+					OptionNamingConvention_PadPort='$REFDES_$PINNAME_$NETNAME'
+					OptionUseNamingConvention_EdgePort=false
+					OptionNamingConvention_EdgePort='$NETNAME'
+					OptionUseNamingConvention_PointPort=false
+					OptionNamingConvention_PointPort='$POSTERM_LAYER_$NEGTERM_LAYER'
+					OptionUseNamingConvention_PinGroup=false
+					OptionNamingConvention_PinGroup='$REFDES_GROUP_$NETNAME'
+					OptionUseNamingConvention_PinGroupPort=false
+					OptionNamingConvention_PinGroupPort='$REFDES_$GROUPNAME_$NETNAME'
+					OptionUseNamingConvention_PointISource=false
+					OptionNamingConvention_PointISource='I_$POSTERM_NETNAME'
+					OptionUseNamingConvention_PointVSource=false
+					OptionNamingConvention_PointVSource='V_$POSTERM_NETNAME'
+					OptionUseNamingConvention_PointVProbe=false
+					OptionNamingConvention_PointVProbe='VP_$POSTERM_NETNAME'
+					OptionUseNamingConvention_PointDCTerm=false
+					OptionNamingConvention_PointDCTerm='DCT_$NETNAME'
+					OptionUseNamingConvention_PinISource=false
+					OptionNamingConvention_PinISource='I_$REFDES_$NETNAME'
+					OptionUseNamingConvention_PinVSource=false
+					OptionNamingConvention_PinVSource='V_$REFDES_$NETNAME'
+					OptionUseNamingConvention_PinVProbe=false
+					OptionNamingConvention_PinVProbe='VP_$REFDES_$NETNAME'
+					OptionUseNamingConvention_PinDCTerm=false
+					OptionNamingConvention_PinDCTerm='DCT_$REFDES_$NETNAME'
+					OptionUseNamingConvention_GroupISource=false
+					OptionNamingConvention_GroupISource='I_$REFDES_$NETNAME'
+					OptionUseNamingConvention_GroupVSource=false
+					OptionNamingConvention_GroupVSource='V_$REFDES_$NETNAME'
+					OptionUseNamingConvention_GroupVProbe=false
+					OptionNamingConvention_GroupVProbe='VP_$REFDES_$NETNAME'
+					OptionUseNamingConvention_GroupDCTerm=false
+					OptionNamingConvention_GroupDCTerm='DCT_$REFDES_$NETNAME'
+					OptionUseNamingConvention_NCPortInstPort=false
+					OptionNamingConvention_NCPortInstPort='$REFDES_$PORTNAME_$TERMNAME'
+				$end 'NamingConvention'
+				$begin 'TextStyles'
+					TextStyle(N='<DefaultAnnotation>', F='Arial', Hght=12, Scale=false)
+					TextStyle(N='<DefaultPlotter>', Plot=true, F='RomanSimplex', Hght=5, HghtUnt='mm')
+					TextStyle(N='<DefaultMeasure>', Plot=true, F='RomanSimplex', Hght=1, HghtUnt='mm')
+				$end 'TextStyles'
+				$begin 'TraceStyles'
+					TraceStyle(name='Half Grid', size='0.5mm', bendStyle=0, capStyle=0, capStyle=0)
+					TraceStyle(name='1 Grid', size='1mm', bendStyle=0, capStyle=0, capStyle=0)
+					TraceStyle(name='2 Grids', size='2mm', bendStyle=0, capStyle=0, capStyle=0)
+					TraceStyle(name='5 Grids', size='5mm', bendStyle=0, capStyle=0, capStyle=0)
+				$end 'TraceStyles'
+				'current via style'='PlanarEMVia'
+				'current pin style'=''
+				MajorColor=16772075
+				MinorColor=16774645
+				ShowGrid=true
+				PageExtent(-0.1, -0.1, 0.1, 0.1)
+				'background color'=16777215
+				DefaultToSketchMode=true
+				fillMode=false
+				DocVisibilityFlag=962
+				FastViewTransforms=true
+				StartingHierarchyLevel=0
+				EndingHierarchyLevel=-1
+				SingleLevelView=false
+				DesignMode=1
+				Is2dRendering=false
+				'show connection points'=false
+				'draw rats'=false
+				'display vertex labels'=false
+				ColorByNet=false
+				'display package graphics'=false
+				'rectangle description'=0
+				snaptoport=true
+				autoplacecomp=false
+				AutoScale=true
+				'measure display digits'=3
+				'display measure units'=false
+				SuppressPads=true
+				AntiPadsOption=2
+				TextIsVisible=true
+				'primary selection color'=255
+				'secondary selection color'=3289780
+				'preview selection'=false
+				AllowDragOnFirstClick=false
+				PinConnectivityPopup=false
+				CreatePortsOnComp=false
+				OptionUseNamingConvention_PadPort=false
+				OptionNamingConvention_PadPort='$REFDES_$PINNAME_$NETNAME'
+				OptionUseNamingConvention_EdgePort=false
+				OptionNamingConvention_EdgePort='$NETNAME'
+				OptionUseNamingConvention_PointPort=false
+				OptionNamingConvention_PointPort='$POSTERM_LAYER_$NEGTERM_LAYER'
+				OptionUseNamingConvention_PinGroup=false
+				OptionNamingConvention_PinGroup='$REFDES_GROUP_$NETNAME'
+				OptionUseNamingConvention_PinGroupPort=false
+				OptionNamingConvention_PinGroupPort='$REFDES_$GROUPNAME_$NETNAME'
+				OptionUseNamingConvention_PointISource=false
+				OptionNamingConvention_PointISource='I_$POSTERM_NETNAME'
+				OptionUseNamingConvention_PointVSource=false
+				OptionNamingConvention_PointVSource='V_$POSTERM_NETNAME'
+				OptionUseNamingConvention_PointVProbe=false
+				OptionNamingConvention_PointVProbe='VP_$POSTERM_NETNAME'
+				OptionUseNamingConvention_PointDCTerm=false
+				OptionNamingConvention_PointDCTerm='DCT_$NETNAME'
+				OptionUseNamingConvention_PinISource=false
+				OptionNamingConvention_PinISource='I_$REFDES_$NETNAME'
+				OptionUseNamingConvention_PinVSource=false
+				OptionNamingConvention_PinVSource='V_$REFDES_$NETNAME'
+				OptionUseNamingConvention_PinVProbe=false
+				OptionNamingConvention_PinVProbe='VP_$REFDES_$NETNAME'
+				OptionUseNamingConvention_PinDCTerm=false
+				OptionNamingConvention_PinDCTerm='DCT_$REFDES_$NETNAME'
+				OptionUseNamingConvention_GroupISource=false
+				OptionNamingConvention_GroupISource='I_$REFDES_$NETNAME'
+				OptionUseNamingConvention_GroupVSource=false
+				OptionNamingConvention_GroupVSource='V_$REFDES_$NETNAME'
+				OptionUseNamingConvention_GroupVProbe=false
+				OptionNamingConvention_GroupVProbe='VP_$REFDES_$NETNAME'
+				OptionUseNamingConvention_GroupDCTerm=false
+				OptionNamingConvention_GroupDCTerm='DCT_$REFDES_$NETNAME'
+				OptionUseNamingConvention_NCPortInstPort=false
+				OptionNamingConvention_NCPortInstPort='$REFDES_$PORTNAME_$TERMNAME'
+				useFixedDrawingResolution=false
+				DrawingResolution='0.002mm'
+				$begin 'ViewConfigs'
+					ViewConfigsCurrent=''
+				$end 'ViewConfigs'
+				currentTextStyle=0
+				currentTraceStyle=0
+				prevBounds(-1000, -1000, 1000, 1000)
+				prevMapFactor(1000, 1000)
+				prevOrigin(0, 0)
+				prevViewExtent(0, 0)
+				prevZoomScale=1
+				$begin 'Animation'
+					LabelColor(R=230, G=230, B=230)
+					FontName='Arial'
+					FontHeight=24
+					FontWeight=400
+				$end 'Animation'
+			$end 'TopLayout'
+		$end 'Instance'
+		$begin 'SODInfo'
+			$begin '0.1_?F'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '0.1_?F'
+			$begin '0.22_?F'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '0.22_?F'
+			$begin '0_Ohms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '0_Ohms'
+			$begin '1.2_kOhms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '1.2_kOhms'
+			$begin '1000pF'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '1000pF'
+			$begin '100_?F'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '100_?F'
+			$begin '10_?F'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '10_?F'
+			$begin '10_Ohms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '10_Ohms'
+			$begin '1_?F'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '1_?F'
+			$begin '1_kOhms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '1_kOhms'
+			$begin '1uF'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '1uF'
+			$begin '3.3_kOhms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '3.3_kOhms'
+			$begin '330_Ohms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '330_Ohms'
+			$begin '4.7_?F'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '4.7_?F'
+			$begin '56_Ohms'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '56_Ohms'
+			$begin '6.8_?H'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end '6.8_?H'
+			$begin 'Hole_3.3mm_x_9mm'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end 'Hole_3.3mm_x_9mm'
+			$begin 'main'
+				$begin 'CosimDefinition'
+					CosimDefName='DefaultNetlist'
+					$begin 'SODInstanceMap'
+					$end 'SODInstanceMap'
+					SODComponentList()
+				$end 'CosimDefinition'
+			$end 'main'
+		$end 'SODInfo'
+	$end 'DataInstances'
+	$begin 'WBSystemIDToDesignInstanceIDMap'
+	$end 'WBSystemIDToDesignInstanceIDMap'
+	$begin 'WBSysIDSysDetails'
+	$end 'WBSysIDSysDetails'
+	$begin 'WBConnIDConnDetails'
+	$end 'WBConnIDConnDetails'
+	$begin 'WBMaterialGuidDetails'
+		WBMaterialGuidMap()
+	$end 'WBMaterialGuidDetails'
+	$begin 'MinervaProjectSettingsBlk'
+		MinervaRemoteFilePath=''
+		FolderContainerString=''
+	$end 'MinervaProjectSettingsBlk'
+$end 'AnsoftProject'
+$begin 'AllReferencedFilesForProject'
+$end 'AllReferencedFilesForProject'
+$begin 'ProjectPreview'
+	IsEncrypted=false
+	Thumbnail64=''
+	$begin 'DesignInfo'
+		DesignName='main'
+		Notes=''
+		Factory='HFSS 3D Layout Design'
+		IsSolved=false
+		'Nominal Setups'[2: 'EMI Scan Sim 1', 'HFSS Setup 1']
+		'Nominal Setup Types'[2: 'SIwaveEMI', 'HFSS']
+		'Optimetrics Setups'[0:]
+		'Optimetrics Experiment Types'[0:]
+		Image64=''
+	$end 'DesignInfo'
+$end 'ProjectPreview'

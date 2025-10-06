@@ -1,0 +1,37 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___DECOUPLING CAPACITOR DISTANCE FROM IC POWER PIN___
+** INTRODUCTION **
+
+Decoupling capacitors should not be connected between the power and ground leads coming from a 
+chip before these leads are attached to the power and ground planes. Instead, the power and 
+ground leads from the chip should be connected to the planes as close to the chip as possible. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Max Distance between Decoupling Cap and IC Power Pin  12.7   
+Sort by Column  CAP DISTANCE  
+Weighting Factor  0.9    
+Maximum Search Distance for Cap  25.4   
+Allow Capacitors on Both Sides of Board  YES    
+Require Only One Cap Pin to be Within Specified Distance  YES    
+Require ALL Cap Pins to be within Specified Distance  YES    
+ICs to Check  ALL    
+
+** RESULTS: **
+INDEX  NET    IC PIN  REASON FOR FAIL  CAPACITOR  CAP DISTANCE  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

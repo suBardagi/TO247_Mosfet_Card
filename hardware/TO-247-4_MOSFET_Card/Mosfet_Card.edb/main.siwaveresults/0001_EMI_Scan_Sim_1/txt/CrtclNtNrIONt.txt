@@ -1,0 +1,40 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___CRITICAL NET NEAR I/O NET___
+** INTRODUCTION **
+
+Critical nets which do not run off the card must not run within 
+12.7 mm of an off-card net. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Min Required Distance Between Critical Net and I/O Net  12.7   
+Sort by Column  INDEX  
+Weighting Factor  1.0    
+Min I/O Net Segment Length to Check  0.635  
+Min Critical Net Segment Length to Check  0.635  
+Check Nets on Different Layers  YES    
+Check I/O Components  YES    
+Check Nets that are Both I/O and Critical  NO     
+Ignore Violations If Net Approaches Edge at 90 Degrees +/-  5      
+Suppress Multiple Violations for Same Net-to-Net Vio  NO     
+Report Violation Only Once per I/O Component  NO     
+Critical Net Choice  CRITICAL  
+
+** RESULTS: **
+INDEX  I/O NET  CRITICAL NET  I/O COMPONENT  I/O SEG  CRITICAL SEG  I/O LAYER  CRIT LAYER  DISTANCE  EXCLUSION ZONE  RANK 
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

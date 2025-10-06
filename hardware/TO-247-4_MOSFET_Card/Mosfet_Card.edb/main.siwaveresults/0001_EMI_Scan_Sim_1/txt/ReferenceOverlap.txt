@@ -1,0 +1,30 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___DISPARATE REFERENCE OVERLAP___
+** INTRODUCTION **
+
+Report nets with planes that overlap planes from nets that cause noise. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Maximum Total Overlap Area  0.64516  
+Sort by Column  INDEX  
+Weighting Factor  0.6    
+
+** RESULTS: **
+INDEX  NET1   LAYER1  NET2   LAYER2  OVERLAP  AREA   
+
+
+
+
+
+================================================================================

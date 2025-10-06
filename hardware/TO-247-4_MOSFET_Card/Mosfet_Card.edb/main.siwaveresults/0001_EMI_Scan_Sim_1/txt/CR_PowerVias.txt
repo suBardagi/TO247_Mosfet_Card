@@ -1,0 +1,42 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___POWER VIA DENSITY___
+** INTRODUCTION **
+
+Report Power Nets that do not have enough vias between shapes on adjacent layers. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Minimum Number of Vias  100    
+Use Grid  ON     
+Grid Size (X Direction)  25.4   
+Grid Size (Y Direction)  25.4   
+Number of Vias Required within Each Grid  1      
+Check Only When Grid on Board by at Least  33     
+Sort by Column  INDEX  
+Weighting Factor  0.6    
+Hidden Debug switch  0      
+
+** RESULTS: **
+INDEX  NET    LAYER1  LAYER2  VIAS   
+0      GND_Highside ( G )    Top Layer   Layer 1   0.00   
+1      GND_Highside ( G )    Layer 1   Layer 2   0.00   
+2      GND_Highside ( G )    Layer 2   Bottom Layer   0.00   
+3      GND_Highside ( G )    Top Layer   Layer 1   0.00   
+4      GND_Highside ( G )    Layer 1   Layer 2   0.00   
+5      GND_Highside ( G )    Layer 2   Bottom Layer   0.00   
+
+
+__Number of Violations:	6__
+
+__Number Analyzed:	4__
+================================================================================

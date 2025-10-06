@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<emsattree name="Ansys EMI Scanner" version="2024 R2">
+
+  <ruletype name="General Settings">
+    <rule id="0" longname="Current Settings" shortname="Current Settings">
+      <description>This panel allows the user to set general parameters that apply to all rules.</description>
+      <param label="Units" name="UNITS" type="single_select_list" view="always">
+        <description>Allows the user to select the units that will be used for all the various rule parameters  involving distances. The default unit is mils, but if this units parameter is changed, then  all of the values using these units will be converted to the new units.</description>
+        <value>um</value>
+        <value>mils</value>
+        <value type="default">mm</value>
+        <value>cm</value>
+        <value>inches</value>
+      </param>
+      <param label="Individual HTML Output Files" name="INDIVIDUAL FILES" type="boolean" view="always">
+        <description>Allows the user the option to create an individual HTML output file for each rule.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+    </rule>
+  </ruletype>
+
+  <ruletype name="Signal Reference">
+    <rule engname="NtCrssngSplt" id="1" longname="Critical Net Crossing Split Reference Plane" shortname="Net Crossing Split">
+      <description>Critical nets must not cross a split in the adjacent reference plane.
+                 Notes:
+                 1. Any crossing of an adjacent plane by a critical net will cause a violation.
+                 2. A crossing is allowed if two stitching capacitors (one on either side of the
+                    crossing point) are within a specified distance of the crossing.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Max Allowable Distance from Net Crossing to Stitching Caps" name="MAX DIST FROM GAP TO CAP" type="float_length" units="mm" view="always">
+        <description>Two stitching capacitors must be found within this distance of the point where the net  crosses a split in its reference plane.</description>
+        <value type="default">7.62</value>
+      </param>
+      <param label="Max Allowable Return Current Diversion" name="MAX TRACE DIST FROM GAP PT TO GAP PT" type="float_length" units="mm" view="always">
+        <description>If a signal's return current can divert itself around the gap in the reference plane, the  total distance of the diversion must be less than this value.</description>
+        <value type="default">10.16</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="NET" type="default">Net Name</value>
+        <value altvalue="GAP POINT">Crossing Point</value>
+        <value altvalue="SIG LAYER">Signal Layer</value>
+        <value altvalue="REF LAYERS">Reference Layer(s)</value>
+        <value altvalue="CAPS FOUND">Cap Reference Designator(s)</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">1.0</value>
+      </param>
+      <param label="Only Identify Gaps Between Planes on Same Layer" name="ONLY CHECK GAPS ON THE SAME LAYER" type="boolean" view="advanced">
+        <description>This option allows the user to choose whether gaps are only between planes on the same layer  or not. When the rule tries to pair up nearby plane boundary crossing points and identify gaps,  this parameter will enable/disable a check for layer commonality.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Recognize Dual Plane Reference Within" name="ALLOW DIST VARIATION" type="float_length" units="mm" view="advanced">
+        <description>Instructs EMI Scannner to consider both planes as a reference when checking for gap crossing when  the distance difference to each plane is less than the specified distance.  This allows  recognition of both planes as references for strip line traces when the trace is offset  from the exact center by a small amount (normally for manufacturing reasons).</description>
+        <value type="default">0.0508</value>
+      </param>
+      <param label="Max Distance Between Crossing Points for Combination as Single Gap" name="MAX SEARCH DIST FROM GAP 1 TO GAP 2" type="float_length" units="mm" view="advanced">
+        <description>The rule will try to combine nearby crossing points into a single violation (e.g.  the entrance and exit of a gap between planes). Setting this parameter to a large  value could cause the algorithm to pair up unrelated crossing points, and setting  this parameter to a small value can prevent crossing points from being paired up,  which will result in more violations. It is recommended to set the value to a  reasonable distance based on the board design technology being used (e.g. slightly  larger than the typical plane separation within a layer).</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Suppress Violation for Traces Connected to Via in Gap" name="SUPPRESS VIA IN GAP VIO" type="boolean" view="advanced">
+        <description>Instructs EMI Scannner to ignore trace crossing split/gap when connected to a via within that gap.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Max Distance from Reference Plane for Via in Gap" name="VIO IF GAP TO VIA DIST GREATER THAN" type="float_length" units="mm" view="advanced">
+        <description>Violation will not be suppressed (from above) for vias within gap if the trace extends greater  than the specified distance from edge of the reference plane to the via.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Net Choice" name="NET LISTING" type="multi_select_list" view="advanced">
+        <description>Specifies the type of Nets to include in this rule analysis. Select 1 or more from list.</description>
+        <value altvalue="ALL">All Nets</value>
+        <value altvalue="CRITICAL" type="default">All Critical Nets Only</value>
+        <value altvalue="SINGLE_CRITICAL">All Single-Ended Critical Nets Only</value>
+        <value altvalue="IO">I/O Nets Only</value>
+        <value altvalue="REMOVE_POWER">Exclude Power Nets</value>
+        <value altvalue="REMOVE_GROUND">Exclude Ground Nets</value>
+      </param>
+    </rule>
+    <rule engname="NtChngngRfrnc" id="2" longname="Critical Net Changing Reference Plane" shortname="Net Changing Reference">
+      <description>Critical nets must not change reference planes.
+                 Notes:  
+                 1. Any change in reference plane for a critical net will cause a violation.
+                 2. Part A - Reference plane changing is allowed if the specified number (default 2) of
+                    decoupling capacitors (or vias if the planes are the same net) are within the specified
+                    'smaller' radius from the signal via where the signal changes reference planes.
+                 3. Part B - Reference plane changing is allowed if the specified number (default 3) of
+                    decoupling capacitors (or vias if the planes are the same net) are within the specified
+                    'larger' radius from the signal via where the signal changes reference planes.
+                 4. Part C - Reference plane changing can be ignored when the initial via is within a
+                    specified distance from its IC pin (transmit or receive).</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Sort Changing Reference Violation by Column" name="SORT COLUMN A" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results for Part A(any net changing reference plane). Select from pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="VIA">Via Location</value>
+        <value altvalue="REF LAYER1">reference layer 1</value>
+        <value altvalue="REF LAYER2">reference layer 2</value>
+        <value altvalue="1ST SEGMENT">segment 1</value>
+        <value altvalue="2ND SEGMENT">segment 2</value>
+      </param>
+      <param label="Sort Capacitor/Via Violation by Column" name="SORT COLUMN B" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results for Part B (reference changes without  adequate decoupling). Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="VIA">Via Location</value>
+        <value altvalue="REF PLANE 1">Reference Layer #1</value>
+        <value altvalue="REF PLANE 2">Reference Layer #2</value>
+        <value altvalue="SIG LAYER 1">Signal Layer #1</value>
+        <value altvalue="SIG LAYER 2">Signal Layer #2</value>
+        <value altvalue="CAPS FOUND">Caps Found</value>
+        <value altvalue="CAP DISTANCES">Cap Distances</value>
+      </param>
+      <param label="Sort Overused Via Violation by Column" name="SORT COLUMN C" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results for Part C (overused return vias). Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="NET" type="default">Net Name</value>
+        <value altvalue="RETURN VIA">Return Via</value>
+        <value altvalue="START VIA LAYER">Start Via Layer</value>
+        <value altvalue="END VIA LAYER">End Via Layer</value>
+        <value altvalue="CURRENT">Via Current</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Overused Return Vias" name="CHECK FOR OVER USED VIAS" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will check for overused return vias. Overused Return Vias = 'no' means  that EMI Scannner will ignore this check.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Max Current Limit" name="MAX CURRENT LIMIT" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the maximum number of signal currents that a return via should carry.  Use this setting if Overused Vias is selected.</description>
+        <value type="default">2.0</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">1.0</value>
+      </param>
+      <param label="Recognize Dual Plane Reference Within" name="ALLOW DIST VARIATION" type="float_length" units="mm" view="advanced">
+        <description>Instructs EMI Scannner to consider both planes as a reference when checking for trace changing  reference planes when the distance difference to each plane is less than the specified  distance. This allows recognition of both planes as references for strip line traces  when the trace is offset from the exact center by a small amount (normally for  manufacturing reasons).</description>
+        <value type="default">0.0508</value>
+      </param>
+      <param label="Allow Partial Reference Plane Change" name="ALLOW PARTIAL REFERENCE PLANE CHANGE" type="boolean" view="advanced">
+        <description>Instructs EMI Scannner to ignore violation if one of the two reference planes remains a  reference plane on both sides of the via transition.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Check for Plane Decoupling" name="CHECK FOR PLANE DECOUPLING" type="boolean" view="advanced">
+        <description>Instructs EMI Scannner to ignore violation if a decoupling capacitor exists between the two  reference planes (entering reference plane and leaving reference plane) and is within  a specified distance (below) from the signal via.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Include ALL Reference Plane Changes" name="SHOW ALL VIA REFERENCE PLANE CHANGES" type="boolean" view="advanced">
+        <description>Instructs EMI Scannner (when 'yes' is selected) to display all reference plane changes. When  there are two associated reference planes for the entry to the via, and two different  associated reference planes for the trace leaving the via, selecting 'yes' will show two  violations for this transition.  Note: if 'no' is selected, and a decoupling capacitor exists between one of the entering  reference planes and one of the leaving reference planes (within the specified distance),  no violation will be reported, even though the two other reference planes do not have any  connection.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Number of Vias Allowed on Net" name="NUMBER OF ALLOWED VIAS ON NET" type="integer" view="advanced">
+        <description>Allows user to specify the number of via reference plane changes that are allowed on  critical nets.  Note: if no vias are desired except the 'escape' via close to the IC, then set this  parameter to zero, and set the next parameter to 'yes'.</description>
+        <value type="default">0</value>
+      </param>
+      <param label="Allow Via Close to IC" name="ALLOW A VIA CLOSE TO AN IC" type="boolean" view="advanced">
+        <description>Allows user to ignore vias that are close to the IC and are required to get a trace from  the surface to an inner layer. The user selects the maximum distance this ignored via  may be from the IC in the next parameter.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Max Distance from IC to Ignored Via" name="MAX DISTANCE FROM IC TO VIA" type="float_length" units="mm" view="advanced">
+        <description>Allows user to ignore vias within the specified distance from an IC.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Use Point-to-Point Distance from IC to Via" name="USE DIRECT DISTANCE FOR IC TO VIA DIST" type="boolean" view="advanced">
+        <description>If 'yes' is selected, the actual trace path length is NOT calculated. While this option  will allow EMI Scannner rule checking to run faster, if traces are not run directly from IC to  via, violations may be ignored incorrectly.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Allow Via Connection Between Reference Planes" name="ALLOW VIA STITCHING IF SAME POTENTIAL" type="boolean" view="advanced">
+        <description>Allows a via to be used to connect reference planes (to provide return current path)  when the two reference planes are the same net name.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Allow Complex Via Connections (Jogging) Between Planes" name="CHECK FOR VIA JOG" type="boolean" view="advanced">
+        <description>Allows a set of vias (e.g. 'blind' vias which do not extend through all of the layers)  to be used to connect reference planes (to provide return current path) when the two  reference planes are the same net name. This advanced checking requires extra processing  time, because all vias found in the larger via radius are considered as potential paths.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Num of Decoupling Caps Required Within Smaller Radius" name="NUM OF DECOUPLING CAPS WITHIN CLOSER CAP DIST" type="integer" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. This parameter allows the user to  specify the number of decoupling capacitors within the smaller radius.</description>
+        <value type="default">2</value>
+      </param>
+      <param label="Num of Vias Required Within Smaller Radius" name="NUM OF CONNECTING VIAS WITHIN CLOSER VIA DIST" type="integer" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. Typically, a via between planes is  considered a lower impedance/inductance connection than a decoupling capacitor, and  so the user may wish to specify this differently than the decoupling capacitor option.  This parameter allows the user to specify the number of vias within the smaller radius.</description>
+        <value type="default">2</value>
+      </param>
+      <param label="Small Radius Allowable Capacitor Distance" name="CLOSER CAP DIST" type="float_length" units="mm" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. This parameter allows the user to  specify the smaller radius that must contain the required number of capacitors (from  #11 above).</description>
+        <value type="default">6.35</value>
+      </param>
+      <param label="Small Radius Allowable Via Distance" name="CLOSER VIA DIST" type="float_length" units="mm" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. This parameter allows the user to  specify the smaller radius that must contain the required number of vias (from #12  above).</description>
+        <value type="default">8.89</value>
+      </param>
+      <param label="Num of Decoupling Caps Required Within Larger Radius" name="NUM OF DECOUPLING CAPS WITHIN FURTHER CAP DIST" type="integer" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. This parameter allows the user to  specify the number of decoupling capacitors within the larger radius.</description>
+        <value type="default">3</value>
+      </param>
+      <param label="Num of Vias Required Within Larger Radius" name="NUM OF CONNECTING VIAS WITHIN FURTHER VIA DIST" type="integer" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. Typically, a via between planes is  considered a lower impedance/inductance connection than a decoupling capacitor, and  so the user may wish to specify this differently than the decoupling capacitor option.  This parameter allows the user to specify the number of vias within the larger radius.</description>
+        <value type="default">3</value>
+      </param>
+      <param label="Large Radius Allowable Capacitor Distance" name="FURTHER CAP DIST" type="float_length" units="mm" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. This parameter allows the user to  specify the smaller radius that must contain the required number of capacitors (from  #15 above).</description>
+        <value type="default">10.16</value>
+      </param>
+      <param label="Large Radius Allowable Via Distance" name="FURTHER VIA DIST" type="float_length" units="mm" view="advanced">
+        <description>A return current path (when a critical net changes reference planes) may be provided  with either capacitors or vias (when 'yes' is selected in #10 above). The user may  specify a required number of either capacitors or vias within a specified smaller  radius, or, if this requirement is not met, a larger radius may be specified for a  larger number of decoupling capacitors or vias. This parameter allows the user to  specify the smaller radius that must contain the required number of vias (from #16  above).</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Additional Search Range Percent" name="ADDITIONAL SEARCH RANGE PERCENT" type="float" units="%" view="advanced">
+        <description>Allows the user to specify an additional search range beyond the larger radius for  additional capacitors. For example, if the Large-Radius is set to 500 mils, and the  Additional Search range at 100%, EMI Scannner will report capacitors within 1000 mils when  a violation occurs.</description>
+        <value type="default">100</value>
+      </param>
+      <param label="Force All Plane Combinations to Be Decoupled" name="FORCE ALL PLANE COMBINATIONS TO BE DECOUPLED" type="boolean" view="advanced">
+        <description>Consider the following stackup:  Assume the net references V02/V03 when on layer S02 and V04/V05  when on S04 (see diagram below).    V02  --------------------  S02        ------+  V03  -----------|--------  S03                |  V04  -----------|--------  S04                +-----  V05  --------------------    For this case, you can have the tool either look for decaps  connecting V02&lt;-&gt;V04 and V03&lt;-&gt;V05 or have it look for V02&lt;-&gt;V04,  V02&lt;-&gt;V05, V03&lt;-&gt;V04, and V03&lt;-&gt;V05. By default, it will look for 1st  ref layer to 1st ref layer and 2nd ref layer to 2nd ref layer  (V02&lt;-&gt;V04, V03&lt;-&gt;V05). If you want the tool to decouple all ref  plane combinations, set this value to YES.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Net Choice" name="NET LISTING" type="single_select_list" view="advanced">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="ALL">All Nets</value>
+        <value altvalue="CRITICAL" type="default">All Critical Nets Only</value>
+        <value altvalue="SINGLE_CRITICAL">All Single-Ended Critical Nets Only</value>
+        <value altvalue="IO">I/O Nets Only</value>
+      </param>
+    </rule>
+    <rule engname="NtNrEdgFRfrnc" id="3" longname="Critical Net Near Edge of Reference Plane" shortname="Net Near Edge of Reference">
+      <description>Critical nets may not be within a specified distance of the edge of their reference plane.
+                 Notes:
+                 1. Specified distance from edge of plane may be different for external and internal
+                    signal layers.
+                 2. Distance to edge of board may be checked instead of edge of plane.
+                 3. Edge connector traces may be ignored.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Min Distance from Edge Required for External Signal Layers" name="CLOSEST DISTANCE OF SEG ON EXTERNAL LAYER" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify what minimum distance must exist between the edge of the  reference plane and a critical signal net when the net is on an external layer.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Min Distance from Edge Required for Internal Signal Layers" name="CLOSEST DISTANCE OF SEG ON INTERNAL LAYER" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify what minimum distance must exist between the edge of the  reference plane and a critical signal net when the net is on an internal layer.</description>
+        <value type="default">6.35</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="DISTANCE" type="default">Distance</value>
+        <value altvalue="SEG LAYER">Signal Layer</value>
+        <value altvalue="REF LAYER">Reference Layer</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.7</value>
+      </param>
+      <param label="Use Edge of Board (Instead of Edge of Plane)" name="CHECK TO EDGE OF BOARD INSTEAD OF PLANE" type="boolean" view="advanced">
+        <description>Allows users to check distance from critical nets to the edge of the board instead of  the edge of the reference plane. This can be useful if the board is only partially  complete, and all reference planes are not yet completed.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Check All Plane Edges" name="CHECK ANY PLANE EDGE" type="boolean" view="advanced">
+        <description>Allows users to check the distance from nets to any edge of their reference plane, rather  than limiting the check to reference plane edges near the edge of the board.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Ignore Violation If Net Approaches Edge at 90 Degrees +/-" name="NO VIOLATION IF SEG APPROACH IS 90 DEGREES +-" type="float" units="deg" view="advanced">
+        <description>Allows users to ignore edge connectors, etc. which approach the edge of the reference  plane (or board) at a 90 degree angle. The tolerance specified in this option allows  the approach to be slightly off a perfect 90 degrees.</description>
+        <value type="default">5</value>
+      </param>
+      <param label="Check Nets on External Layers" name="CHECK EXTERNAL NETS" type="boolean" view="advanced">
+        <description>Allows the user to specify if nets on external layers should be checked in this rule.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Check Nets on Internal Layers" name="CHECK BURIED NETS" type="boolean" view="advanced">
+        <description>Allows the user to specify if nets on internal layers should be checked in this rule.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Minimum Net Segment Length for Violation" name="MINIMUM SEG LENGTH TO CAUSE VIOLATION" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify the minimum net segment length before EMI Scannner will report a  violation if the net is within the specified distance from the edge of the reference  plane (or board).</description>
+        <value type="default">2.54</value>
+      </param>
+      <param label="Recognize Dual Plane Reference Within" name="ALLOW DIST VARIATION" type="float_length" units="mm" view="advanced">
+        <description>Instructs EMI Scannner to consider both planes as a reference when checking for traces too  close to the edge of the reference planes when the distance difference to each plane  is less than the specified distance. This allows recognition of both planes as references  for strip line traces when the trace is offset from the exact center by a small amount  (normally for manufacturing reasons).</description>
+        <value type="default">0.0508</value>
+      </param>
+      <param label="Net Choice" name="NET LISTING" type="single_select_list" view="advanced">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="ALL">All Nets</value>
+        <value altvalue="CRITICAL" type="default">All Critical Nets Only</value>
+        <value altvalue="SINGLE_CRITICAL">All Single-Ended Critical Nets Only</value>
+        <value altvalue="IO">I/O Nets Only</value>
+      </param>
+    </rule>
+  </ruletype>
+
+  <ruletype name="Wiring/Crosstalk">
+    <rule engname="CrtclNtNrIONt" id="4" longname="Critical Net Near I/O Net" shortname="Critical Net Near I/O Net">
+      <description>Critical nets may not be routed within a specified distance of an I/O net.
+                 Notes:
+                 1. Class of I/O net can be specified.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Min Required Distance Between Critical Net and I/O Net" name="REQUIRED DIST FROM IO NET TO CRIT NET" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the minimum distance between all critical nets and all I/O nets.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="I/O Nets Class to Include" name="IO NET LISTING" type="multi_select_list" view="always">
+        <description>Specifies the type of I/O Nets to include in this rule analysis.  Class 1L: low speed intentional signals that leave the shielded enclosure  Class 1H: high speed intentional signals that leave the shielded enclosure  Class 2:  signals that leave the board on a cable and remain within the shielded enclosure  Class 3:  signals that leave the board directly to another board and remain within the  shielded enclosure</description>
+        <value altvalue="IO">All I/O Nets</value>
+        <value altvalue="IO_CLASS1L" type="default">Class 1L I/O Nets</value>
+        <value altvalue="IO_CLASS1H" type="default">Class 1H I/O Nets</value>
+        <value altvalue="IO_CLASS2">Class 2 I/O Nets</value>
+        <value altvalue="IO_CLASS3">Class 3 I/O Nets</value>
+        <value altvalue="REMOVE_POWER">Exclude Power Nets</value>
+        <value altvalue="REMOVE_GROUND">Exclude Ground Nets</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="CRITICAL NET">Critical Net Name</value>
+        <value altvalue="CRITICAL SEG">Critical Net Segment Location</value>
+        <value altvalue="I/O NET">I/O Net Name</value>
+        <value altvalue="I/O SEG">I/O Net Segment Location</value>
+        <value altvalue="I/O LAYER">I/O Net Layer Name</value>
+        <value altvalue="CRIT LAYER">Critical Net Layer Name</value>
+        <value altvalue="I/O COMPONENT">I/O Component</value>
+        <value altvalue="DISTANCE">Distance</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">1.0</value>
+      </param>
+      <param label="Min I/O Net Segment Length to Check" name="MIN IO SEG LENGTH TO CAUSE VIOLATION" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify the smallest I/O net segment length to check for violations.  All I/O net segments smaller than this specified length will be ignored by EMI Scannner.</description>
+        <value type="default">0.635</value>
+      </param>
+      <param label="Min Critical Net Segment Length to Check" name="MIN CRIT SEG LENGTH TO CAUSE VIOLATION" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify the smallest critical net segment length to check for violations.  All critical net segments smaller than this specified length will be ignored by EMI Scannner.</description>
+        <value type="default">0.635</value>
+      </param>
+      <param label="Check Nets on Different Layers" name="APPLY CHECK ACROSS LAYERS" type="boolean" view="advanced">
+        <description>Allows the user to check distance between I/O nets and critical nets when these nets  are on different layers, and between the same pair of planes.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Check I/O Components" name="CHECK IO COMPONENTS" type="boolean" view="advanced">
+        <description>Allows the user to specify that any I/O component that is within the specified distance  from a critical net will cause a violation.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Check Nets that are Both I/O and Critical" name="CHECK NETS THAT ARE I/O AND CRITICAL" type="boolean" view="advanced">
+        <description>Allows the user to specify that nets labeled as both critical and I/O should be checked  for distance from other I/O nets.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Ignore Violations If Net Approaches Edge at 90 Degrees +/-" name="NO VIOLATION IF SEG APPROACH IS 90 DEGREES +-" type="float" units="deg" view="advanced">
+        <description>Allows users to ignore edge connectors, etc. which approach the edge of the reference  plane (or board) at a 90 degree angle. The tolerance specified in this option allows  the approach to be slightly off a perfect 90 degrees.</description>
+        <value type="default">5</value>
+      </param>
+      <param label="Suppress Multiple Violations for Same Net-to-Net Vio" name="OUTPUT ONLY ONE VIOLATION FOR MULTIPLE IO SEGS TO CRIT SEGS VIOLATIONS" type="boolean" view="advanced">
+        <description>Allows the user to suppress multiple violation reporting when multiple segments on  a critical net infringe on the same I/O net.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Report Violation Only Once per I/O Component" name="OUTPUT ONLY THE FIRST COMPONENT VIOLATION" type="boolean" view="advanced">
+        <description>Allows the user to reduce run time by only checking for violations between critical  nets and I/O components when no other violation has been found for an I/O component.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Critical Net Choice" name="CRITICAL NET LISTING" type="single_select_list" view="never">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="CRITICAL" type="default">All Critical Nets</value>
+      </param>
+    </rule>
+    <rule engname="ExpsdCrtclTrcLngth" id="5" longname="Length of Exposed Critical Traces" shortname="Exposed Critical Trace Length">
+      <description>All critical nets must be buried between solid planes. The allowable length of the
+exposed portion of a critical net may be specified.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Maximum Exposed Critical Net Segment Length" name="MAX DIST OF SEG NET ON OUTSIDE LAYER" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum critical net segment length allowed on external  (exposed) layers.</description>
+        <value type="default">5.08</value>
+      </param>
+      <param label="Total Maximum Exposed Critical Net Length" name="MAX DIST OF NET AN OUTSIDE LAYER" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the total maximum critical net length allowed on external  (exposed) layers. For example, multiple segments on a critical net may be exposed, but  short enough to not cause a violation individually.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column to sort the results on. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="NET">Critical Net Name</value>
+        <value altvalue="TYPE OF VIO">Type of Violation</value>
+        <value altvalue="OUTSIDE LAYER">Outside Layer</value>
+        <value altvalue="SEG(S) CHAIN LENGTH">Segment Exposed Length</value>
+        <value altvalue="SEG(S) TOTAL LENGTH">Total Exposed Length</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.7</value>
+      </param>
+      <param label="Net Choice" name="NET LISTING" type="single_select_list" view="advanced">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="ALL">All Nets</value>
+        <value altvalue="CRITICAL" type="default">All Critical Nets Only</value>
+        <value altvalue="SINGLE_CRITICAL">All Single-Ended Critical Nets Only</value>
+        <value altvalue="IO">I/O Nets Only</value>
+      </param>
+    </rule>
+    <rule engname="CrtclNtIsltn" id="6" longname="Critical Net Isolation (Single-Ended Nets)" shortname="Critical Net Isolation">
+      <description>All critical nets must have a ground-guard trace on either side of the critical net.
+                 Notes:
+                 1. Vacant track isolation may be used in place of ground-guard traces.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Vacant Track Isolation Allowed" name="VACANT TRACK ISOLATION" type="boolean" view="always">
+        <description>Allows the user to specify that vacant tracks (empty space) may be used in place of  ground-guard traces.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Minimum Isolation Distance Required" name="MIN ISOLATION DISTANCE FROM CRITICAL NET" type="float_length" units="mm" view="always">
+        <description>Allows the user to select the minimum distance required between critical nets and all  other nets before EMI Scannner reports a violation. This parameter is used if Vacant Track  Isolation Allowed = 'yes'.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="CRITICAL NET">Critical Net Name</value>
+        <value altvalue="NEAR BY NET">Infringing Net Name</value>
+        <value altvalue="CRIT LAYER">Critical Net Layer</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.5</value>
+      </param>
+      <param label="Minimum Critical Net Segment Length" name="MIN SEG LENGTH TO CAUSE VIOLATION" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to ignore short critical net segments.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Max Distance between Vias on Ground-Guard Traces" name="MIN VIA TO VIA DISTANCE ON GROUND GUARD TRACE" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify the maximum distance between vias (connected to 'ground')  on ground-guard traces.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Ignore Violations If Approach Angle is 90 Degrees +/-" name="NO VIOLATION IF SEG APPROACH IS 90 DEGREES +-" type="float" units="deg" view="advanced">
+        <description>Allows users to ignore net segments that approach each other at (or near) a 90 degree  angle. The tolerance specified in this option allows the approach to be slightly off  a perfect 90 degrees.</description>
+        <value type="default">5</value>
+      </param>
+      <param label="Critical Net Choice" name="CRITICAL NET LISTING" type="single_select_list" view="never">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="CRITICAL" type="default">All Critical Nets</value>
+      </param>
+    </rule>
+    <rule engname="CrtclDffrntlNtIsltn" id="7" longname="Critical Net Isolation (Differential Nets)" shortname="Critical Differential Net Isolation">
+      <description>All critical differential nets must have a ground-guard trace on either side of
+the differential pair of nets.
+                 Notes:
+                 1. Vacant track isolation may be used in place of ground-guard traces.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Vacant Track Isolation Allowed" name="VACANT TRACK ISOLATION" type="boolean" view="always">
+        <description>Allows the user to specify that vacant tracks (empty space) may be used in place of  ground-guard traces.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Minimum Isolation Distance Required" name="MIN ISOLATION DISTANCE FROM CRITICAL NET" type="float_length" units="mm" view="always">
+        <description>Allows the user to select the minimum distance required between critical nets and all  other nets before EMI Scannner reports a violation. This parameter is used if Vacant Track  Isolation Allowed = 'yes'.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="CRITICAL NET">Critical Net Name</value>
+        <value altvalue="NEAR BY NET">Infringing Net Name</value>
+        <value altvalue="CRIT LAYER">Critical Net Layer</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.5</value>
+      </param>
+      <param label="Max Distance Between Complementary Nets" name="DISTANCE FROM ONE DIFF NET TO THE OTHER" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to set a maximum spacing between a pair of critical nets (creating a  critical differential pair).</description>
+        <value type="default">0.635</value>
+      </param>
+      <param label="Minimum Critical Net Segment Length" name="MIN SEG LENGTH TO CAUSE VIOLATION" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to ignore short critical net segments.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Max Distance between Vias on Ground-Guard Traces" name="MIN VIA TO VIA DISTANCE ON GROUND GUARD TRACE" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify the maximum distance between vias (connected to 'ground')  on ground-guard traces.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Ignore Violations If Approach Angle is 90 Degrees +/-" name="NO VIOLATION IF SEG APPROACH IS 90 DEGREES +-" type="float" units="deg" view="advanced">
+        <description>Allows users to ignore net segments that approach each other at (or near) a 90 degree  angle. The tolerance specified in this option allows the approach to be slightly off a  perfect 90 degrees.</description>
+        <value type="default">5</value>
+      </param>
+      <param label="Critical Net Choice" name="CRITICAL NET LISTING" type="single_select_list" view="never">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="CRITICAL" type="default">All Critical Nets</value>
+      </param>
+    </rule>
+    <rule engname="CrtclDffrntlNtMtchng" id="8" longname="Critical Differential Net Length Matching and Spacing" shortname="Critical Differential Net Matching">
+      <description>All critical differential nets must be routed within a specified distance of each other, and the
+length of the differential pair of nets must match within a specified amount.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Max Distance Between Complementary Nets" name="DISTANCE FROM ONE DIFF NET TO THE OTHER" type="float_length" units="mm" view="always">
+        <description>Allows the user to set a maximum spacing between a pair of critical nets (creating a  critical differential pair).</description>
+        <value type="default">0.635</value>
+      </param>
+      <param label="Maximum Length Mismatch" name="DIFFERENTIAL PAIR LENGTH MISMATCH DISTANCE" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum difference in length between a critical  differential pair of nets.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="CRITICAL NET">Critical Net Name</value>
+        <value altvalue="CRIT SEG LAYER">Critical Net Layer Name</value>
+        <value altvalue="MIS-MATCH DIFF">Length Mismatch</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.7</value>
+      </param>
+      <param label="Min Critical Net Segment Length" name="MIN SEG LENGTH TO CAUSE VIOLATION" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to ignore short critical net segments.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Critical Net Choice" name="CRITICAL NET LISTING" type="single_select_list" view="never">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="CRITICAL" type="default">All Critical Nets</value>
+      </param>
+    </rule>
+    <rule engname="WdPwrGrndTrcs" id="9" longname="Wide Power/Ground Traces" shortname="Wide Power/Ground Traces">
+      <description>All power and ground traces longer than a specified distance should be wider than
+another specified distance. This does not include grounded guard traces.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Min Power/Ground Trace Width" name="MIN POWER GROUND TRACE WIDTH" type="float_length" units="mm" view="always">
+        <description>Allows the user to set a minimum width limit for all power/ground traces (except grounded  guard traces).</description>
+        <value type="default">0.381</value>
+      </param>
+      <param label="Min Power/Ground Trace Length" name="POWER GROUND TRACE LENGTH" type="float_length" units="mm" view="always">
+        <description>Allows the user to ignore short power/ground traces.</description>
+        <value type="default">0.635</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="PWR/GND">Net Name</value>
+        <value altvalue="SEG LAYER">Segment Layer</value>
+        <value altvalue="SEG WIDTH" type="default">Segment Width</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.2</value>
+      </param>
+    </rule>
+  </ruletype>
+
+  <ruletype name="Decoupling">
+    <rule engname="DcplngCpctrDnsty" id="10" longname="Decoupling Capacitor Density" shortname="Decoupling Capacitor Density">
+      <description>Decoupling capacitors must be placed between all adjacent plane pairs within a
+specified grid density.
+                 Notes:
+                 1. Decoupling between power/ground-reference pairs may be selected instead of
+                    decoupling between adjacent pairs of planes.
+                 2. The number of decoupling capacitors required within each grid location can be
+                    adjusted.
+                 3. A via may connect planes of same net name instead of a capacitor.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Check Only for Pwr-to-Gnd Plane Decoupling" name="ONLY POWER TO GROUND DECOUPLING" type="boolean" view="always">
+        <description>Allows the user to only check for decoupling capacitors between power and ground planes.  Selecting this option will ignore plane-to-plane decoupling.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Grid Size (X Direction)" name="GRID WIDTH" type="float_length" units="mm" view="always">
+        <description>The size of the grid EMI Scannner uses to check for decoupling capacitors may be specified by  the user. This parameter specifies the x-direction grid size.</description>
+        <value type="default">25.4</value>
+      </param>
+      <param label="Grid Size (Y Direction)" name="GRID HEIGHT" type="float_length" units="mm" view="always">
+        <description>The size of the grid EMI Scannner uses to check for decoupling capacitors may be specified by  the user. This parameter specifies the y-direction grid size.</description>
+        <value type="default">25.4</value>
+      </param>
+      <param label="Number of Decoupling Caps Required within Each Grid" name="NUM OF DECAPS REQUIRED PER GRID" type="integer" view="always">
+        <description>Allows the user to specify the number of decoupling capacitors connecting between planes  that EMI Scannner will require within each grid location.</description>
+        <value type="default">1</value>
+      </param>
+      <param label="Number of Vias Required within Each Grid" name="NUM OF VIAS REQUIRED PER GRID" type="integer" view="always">
+        <description>Allows the user to specify the number of vias connecting between planes that EMI Scannner will  require within each grid location. This parameter is only active when Advanced parameter  #2 (below) is 'yes'.</description>
+        <value type="default">1</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="LAYERS">Layer Names</value>
+        <value altvalue="REF PLANE 1">Power/Gnd Net #1</value>
+        <value altvalue="REF PLANE 2">Power/Gnd Net #2</value>
+        <value altvalue="GRID LOCATION">Grid Location</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.8</value>
+      </param>
+      <param label="Allow Via Connection for Same Net Name" name="CONNECTING VIA FOR SAME POTENTIAL" type="boolean" view="advanced">
+        <description>This parameter allows the user to specify to allow a via in place of a decoupling  capacitor when the two planes are the same net name.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Include Power/Ground Islands on Signal Layers" name="CHECK POWER ISLANDS" type="boolean" view="advanced">
+        <description>Allows the user to include all power/ground islands when checking for decoupling  capacitors. Selecting 'no' will not check for decoupling on these power/ground islands.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Check Only When Grid on Board by at Least" name="CHECK ONLY IF GRID IS ON THE BOARD BY AT LEAST" type="float" units="%" view="advanced">
+        <description>Allows the user to check a grid when at least the specified grid percentage is on the  board. This allows small portions of the board (that may occur when the grid size is  not an integer increment of the board size), to be ignored.</description>
+        <value type="default">33</value>
+      </param>
+      <param label="Ignore Violations from Pwr/Gnd Nets with Same Name" name="SUPPRESS VIOS FROM SAME NETS" type="boolean" view="advanced">
+        <description>This allows the user to select that only one plane of a given name is checked for  violations. For example, if two planes are "gnd", then if a violation occurred between  gnd and another layer, only one violation would be reported.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Require One Capacitor Pin to be Inside Grid" name="COMPONENT PIN MUST BE INSIDE GRID" type="boolean" view="advanced">
+        <description>Allegro sometimes defines a component's boundary box too large. Since the rule is  looking for whether the component falls inside the grid or outside the grid, this can  lead to the rule thinking that a component is inside the grid when it is in fact outside  the grid (but its boundary box still falls at least partially inside the grid). The user  can change how EMI Scannner determines whether the component is inside or outside the grid in  one of three ways:  a) Treat the component as inside the grid if any pin of the component is inside the grid:  Set: " Require One Capacitor Pin to be Inside Grid " =  yes and  " Require ALL Capacitor Pins to be Inside Grid " = no  b) Treat the component as inside the grid only if all the pins on the component are  inside the grid:  Set: " Require One Capacitor Pin to be Inside Grid " =  yes and  " Require ALL Capacitor Pins to be Inside Grid " = yes  c) Treat the component as inside the grid if the component's boundary box intersects  the grid:  Set: " Require One Capacitor Pin to be Inside Grid " =  no and  " Require ALL Capacitor Pins to be Inside Grid " = yes or no</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Require ALL Capacitor Pins to be Inside Grid" name="ALL COMPONENT PINS MUST FALL INSIDE GRID" type="boolean" view="advanced">
+        <description>Allegro sometimes defines a component's boundary box too large. Since the rule is  looking for whether the component falls inside the grid or outside the grid, this can  lead to the rule thinking that a component is inside the grid when it is in fact outside  the grid (but its boundary box still falls at least partially inside the grid). The user  can change how EMI Scannner determines whether the component is inside or outside the grid in  one of three ways:  a) Treat the component as inside the grid if any pin of the component is inside the grid:  Set: " Require One Capacitor Pin to be Inside Grid " =  yes and  " Require ALL Capacitor Pins to be Inside Grid " = no  b) Treat the component as inside the grid only if all the pins on the component are  inside the grid:  Set: " Require One Capacitor Pin to be Inside Grid " =  yes and  " Require ALL Capacitor Pins to be Inside Grid " = yes  c) Treat the component as inside the grid if the component's boundary box intersects  the grid:  Set: " Require One Capacitor Pin to be Inside Grid " =  no and  " Require ALL Capacitor Pins to be Inside Grid " = yes or no</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Layer Choice" name="LAYER LISTING" type="single_select_list" view="advanced">
+        <description>Specifies the Layers to include in this rule analysis.</description>
+        <value altvalue="ALL" type="default">All</value>
+        <value altvalue="TOP">Top Only</value>
+        <value altvalue="BOTTOM">Bottom Only</value>
+      </param>
+    </rule>
+    <rule engname="PwrPnCpctrDstnc" id="11" longname="Decoupling Capacitor Distance from IC Power Pin" shortname="Power Pin Capacitor Distance">
+      <description>A decoupling capacitor must be connected between the power and ground-reference
+planes and be placed within a specified distance from each IC power pin.
+                 Notes:
+                 1. Capacitors may be limited to one side of the board or not.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Max Distance between Decoupling Cap and IC Power Pin" name="MAX DISTANCE BETWEEN DECOUPLING CAP AND IC POWER PIN" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum distance between an IC power pin and its  decoupling capacitor.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="CAP DISTANCE" type="default">Capacitor Distance</value>
+        <value altvalue="IC PIN">IC Pin</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="REASON FOR FAIL">Violation Message</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.9</value>
+      </param>
+      <param label="Maximum Search Distance for Cap" name="MAX SEARCH BOX FOR CAPS" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify a maximum search distance for a cap. A larger search box increases the  chances of EMI Scannner finding caps, but can slow down the processing time of the rule.</description>
+        <value type="default">25.4</value>
+      </param>
+      <param label="Allow Capacitors on Both Sides of Board" name="CHECK CAPS ON WRONG SIDE OF BOARD" type="boolean" view="advanced">
+        <description>Allows the user to include capacitors on both sides of the board to satisfy this rule.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Require Only One Cap Pin to be Within Specified Distance" name="COMPONENT PIN MUST BE INSIDE BOX" type="boolean" view="advanced">
+        <description>Allegro sometimes defines a component's boundary box too large. Since the rule is  looking for whether the capacitor falls within a specified distance from the IC power  pin, this can lead to the rule thinking that a capacitor is meets this requirement when  it does not really meet the requirement. The user can change how EMI Scannner determines  whether the capacitor meets the requirement in one of three ways:  a) Treat the capacitor as meeting the requirement if any pin of the capacitor is within  the specified distance:  Set: " Require Only One Capacitor Pin to be Within Specified Distance " =  yes and  " Require ALL Capacitor Pins to be Within Specified Distance " = no  b) Treat the capacitor as meeting the requirement if all pins of the capacitor are  within the specified distance:  Set: " Require Only One Capacitor Pin to be Within Specified Distance " =  yes and  " Require ALL Capacitor Pins to be Within Specified Distance " = yes  c) Treat the capacitor as meeting the requirement if the capacitor's boundary box meets  the requirement:  Set: " Require Only One Capacitor Pin to be Inside Grid " =  no and  " Require ALL Capacitor Pins to be Inside Grid " = yes or no</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Require ALL Cap Pins to be within Specified Distance" name="ALL COMPONENT PINS MUST FALL INSIDE BOX" type="boolean" view="advanced">
+        <description>Allegro sometimes defines a component's boundary box too large. Since the rule is  looking for whether the capacitor falls within a specified distance from the IC power  pin, this can lead to the rule thinking that a capacitor is meets this requirement when  it does not really meet the requirement. The user can change how EMI Scannner determines  whether the capacitor meets the requirement in one of three ways:  a) Treat the capacitor as meeting the requirement if any pin of the capacitor is within  the specified distance:  Set: " Require Only One Capacitor Pin to be Within Specified Distance " =  yes and  " Require ALL Capacitor Pins to be Within Specified Distance " = no  b) Treat the capacitor as meeting the requirement if all pins of the capacitor are  within the specified distance:  Set: " Require Only One Capacitor Pin to be Within Specified Distance " =  yes and  " Require ALL Capacitor Pins to be Within Specified Distance " = yes  c) Treat the capacitor as meeting the requirement if the capacitor's boundary box meets  the requirement:  Set: " Require Only One Capacitor Pin to be Inside Grid " =  no and  " Require ALL Capacitor Pins to be Inside Grid " = yes or no</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="ICs to Check" name="IC COMPONENT LISTING" type="single_select_list" view="advanced">
+        <description>Specifies the type of Components to include in this rule analysis.</description>
+        <value altvalue="ALL" type="default">All</value>
+        <value altvalue="HIGH_SPEED">High Speed ICs Only</value>
+      </param>
+    </rule>
+    <rule engname="ICPwrGrndPn-VDstnc" id="12" longname="IC Power/Ground-Reference Pin Distance to Via" shortname="IC Power/Ground Pin-Via Distance">
+      <description>The trace connecting between the IC power or ground-reference pin and the
+associated via to the power/ground-reference plane must be no longer than
+the specified distance.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Maximum Distance between IC Pin and Via" name="MAX PATH LENGTH FROM PIN TO VIA" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum distance between the IC power or ground-reference  pin and the via to the power or ground-reference plane.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="POWER PIN">Power Pin Location</value>
+        <value altvalue="ASSOC VIA">Via Location</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="DISTANCE" type="default">Distance</value>
+        <value altvalue="MESSAGES">Violation Message</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.9</value>
+      </param>
+      <param label="Maximum Search Distance for Via" name="MAX SEARCH BOX FOR VIAS" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify a maximum search distance for a via, when a violation is  found. This allows the user to quickly determine if the via is barely outside the  original requirement, and therefore not a serious violation.</description>
+        <value type="default">3.81</value>
+      </param>
+      <param label="Apply Rule to Power Pins" name="APPLY RULE TO POWER PINS" type="boolean" view="never">
+        <description>You can force the rule to not check the power pins by setting the next  parameter to NO.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Apply Rule to Ground Pins" name="APPLY RULE TO GROUND PINS" type="boolean" view="never">
+        <description>You can force the rule to not check the ground pins by setting the  next parameter to NO.</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Check Power/Ground Pins Without Plane" name="APPLY RULE TO POWER PIN WITHOUT REF PLANE" type="boolean" view="advanced">
+        <description>Allows the user to check the distance between the IC power/ground pin and its via when  the power/ground plane has not been completed yet.</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+      <param label="Verify Via Connected to Appropriate Plane" name="VERIFY VIA CONNECTED TO REFERENCE SHAPE" type="boolean" view="advanced">
+        <description>Allows the user to speed up EMI Scannner checking by not verifying that the via connects to  the appropriate plane (shape).</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+    </rule>
+    <rule engname="DcplngCpDstncTV" id="13" longname="Decoupling Capacitor Distance to Via" shortname="Decoupling Cap Distance to Via">
+      <description>The traces connecting between a decoupling capacitor and its associated vias to
+the power/ground-reference planes must be no longer than the specified distance.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Maximum Distance Between Capacitor and Via" name="MAX PATH LENGTH FROM PIN TO VIA" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum distance between the capacitor pin and the via  to the power or ground-reference plane.</description>
+        <value type="default">1.27</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX">Index</value>
+        <value altvalue="CAPACITOR">Capacitor Name</value>
+        <value altvalue="POWER PIN">Capacitor Pin</value>
+        <value altvalue="ASSOC VIA">Via Location</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="DISTANCE" type="default">Distance</value>
+        <value altvalue="MESSAGES">Violation Messages</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.9</value>
+      </param>
+      <param label="Maximum Search Distance for Via" name="MAX SEARCH BOX FOR VIAS" type="float_length" units="mm" view="advanced">
+        <description>Allows the user to specify a maximum search distance for a via, when a violation is  found. This allows the user to quickly determine if the via is barely outside the  original requirement, and therefore not a serious violation.</description>
+        <value type="default">3.81</value>
+      </param>
+      <param label="Verify Via Connected to Appropriate Plane" name="VERIFY VIA CONNECTED TO REFERENCE SHAPE" type="boolean" view="advanced">
+        <description>Allows the user to speed up EMI Scannner checking by not verifying the via connects to the  appropriate plane (shape).</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+    </rule>
+    <rule engname="PwrGrndTrcDcplng" id="14" longname="Power/Ground-Reference Trace Decoupling" shortname="Power/Ground Trace Decoupling">
+      <description>All power and ground-reference traces longer than a specified length that
+provide power to a fast switching chip must have a decoupling capacitor 
+within a specified distance from the IC power pin.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Maximum Ignorable Power/Ground Trace Length" name="POWER GROUND TRACE LENGTH" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum allowable power/ground trace length that may be  ignored. All traces longer than this length must meet this rule's requirement.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Max Distance between Cap and IC Power Pin" name="MAX DIST CAP PIN TO POWER PIN" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum distance between the capacitor pin and the power  or ground-reference pin.</description>
+        <value type="default">6.35</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="POWER/GROUND NET">Power/Ground Net Name</value>
+        <value altvalue="CHIP PIN">IC Pin Name</value>
+        <value altvalue="CAP PIN">Capacitor Pin Name</value>
+        <value altvalue="VIO MESSAGE">Violation Message</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.6</value>
+      </param>
+      <param label="Net Choice" name="NET LISTING" type="multi_select_list" view="advanced">
+        <description>Specifies the type of Nets to include in this rule analysis.</description>
+        <value altvalue="POWER" type="default">Power</value>
+        <value altvalue="GROUND" type="default">Ground</value>
+      </param>
+    </rule>
+    <rule engname="CR_PowerVias" id="25" longname="Power Via Density" shortname="Power Via Density">
+      <description>This rule checks for power planes that do not have enough adjacent layer via connections.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Minimum Number of Vias" name="MIN_VIAS_THRESHOLD" type="integer" units=" vias" view="always">
+        <description>Minimum number of vias required to connect adjacent power planes.</description>
+        <value type="default">100</value>
+      </param>
+      <param label="Use Grid" name="GRID REQUIRED" type="boolean" view="always">
+        <description>Selects if EMI Scannner will require the vias to be distributed across a grid. State = 'off' means EMI Scannner will only consider the number of vias.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Grid Size (X Direction)" name="GRID WIDTH" type="float_length" units="mm" view="always">
+        <description>The size of the grid EMI Scannner uses to check for vias may be specified by  the user. This parameter specifies the x-direction grid size.</description>
+        <value type="default">25.4</value>
+      </param>
+      <param label="Grid Size (Y Direction)" name="GRID HEIGHT" type="float_length" units="mm" view="always">
+        <description>The size of the grid EMI Scannner uses to check for vias may be specified by  the user. This parameter specifies the y-direction grid size.</description>
+        <value type="default">25.4</value>
+      </param>
+      <param label="Number of Vias Required within Each Grid" name="NUM OF VIAS REQUIRED PER GRID" type="integer" view="always">
+        <description>Allows the user to specify the number of vias connecting between planes that EMI Scannner will  require within each grid location. This parameter is only active when Advanced parameter  #2 (below) is 'yes'.</description>
+        <value type="default">1</value>
+      </param>
+      <param label="Check Only When Grid on Board by at Least" name="CHECK ONLY IF GRID IS ON THE BOARD BY AT LEAST" type="float" units="%" view="advanced">
+        <description>Allows the user to check a grid when at least the specified grid percentage is on the  board. This allows small portions of the board (that may occur when the grid size is  not an integer increment of the board size), to be ignored.</description>
+        <value type="default">33</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="VIAS">Number of Vias</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.6</value>
+      </param>
+      <param label="Hidden Debug switch" name="CR_PV_DEBUG" type="integer" view="never">
+        <description>For testing.</description>
+        <value type="default">0</value>
+      </param>
+    </rule>
+    <rule engname="ReferenceOverlap" id="32" longname="Disparate Reference Overlap" shortname="Reference Overlap">
+      <description>This rule checks for overlapping reference planes from different domains.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Maximum Total Overlap Area" name="MAX OVERLAP" type="float_area" units="mm2" view="always">
+        <description>The maximum total area of all regions of overlap between nets of group A and group B.</description>
+        <value type="default">0.64516</value>
+      </param>
+      <param label="Nets to Include in Reference Group A" name="NET LISTING A" type="multi_select_list" view="advanced">
+        <description>Specifies the a group of nets whose planes must not overlap with planes of nets in the second group.</description>
+        <value altvalue="ALL">All Nets</value>
+        <value altvalue="POWER" type="default">Power Nets</value>
+        <value altvalue="GROUND">Ground Nets</value>
+        <value altvalue="CRITICAL">All Critical Nets Only</value>
+        <value altvalue="SINGLE_CRITICAL">All Single-Ended Critical Nets Only</value>
+        <value altvalue="IO">I/O Nets Only</value>
+        <value altvalue="REMOVE_POWER">Exclude Power Nets</value>
+        <value altvalue="REMOVE_GROUND">Exclude Ground Nets</value>
+      </param>
+      <param label="Nets to Include in Reference Group B" name="NET LISTING B" type="multi_select_list" view="advanced">
+        <description>Specifies the a group of nets whose planes must not overlap with planes of nets in the first group.</description>
+        <value altvalue="ALL">All Nets</value>
+        <value altvalue="POWER">Power Nets</value>
+        <value altvalue="GROUND" type="default">Ground Nets</value>
+        <value altvalue="CRITICAL">All Critical Nets Only</value>
+        <value altvalue="SINGLE_CRITICAL">All Single-Ended Critical Nets Only</value>
+        <value altvalue="IO">I/O Nets Only</value>
+        <value altvalue="REMOVE_POWER">Exclude Power Nets</value>
+        <value altvalue="REMOVE_GROUND">Exclude Ground Nets</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="NET">Net Name</value>
+        <value altvalue="AREA">Total Area Overlap</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.6</value>
+      </param>
+    </rule>
+  </ruletype>
+
+  <ruletype name="Placement">
+    <rule engname="IOFltrDstnc" id="15" longname="I/O Filter Distance to I/O Connector" shortname="I/O Filter Distance">
+      <description>All I/O filters must be placed within a specified distance of the I/O connector.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Max Distance from Filter to I/O Connector" name="MAX DIST FROM CONNECTOR TO FILTER OR CAP" type="float_length" units="mm" view="always">
+        <description>This allows the user to specify the maximum distance a filter may be placed from the  I/O connector.</description>
+        <value type="default">6.35</value>
+      </param>
+      <param label="Sort by Column" name="SORT COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="CLASS1 NET">I/O Net Name</value>
+        <value altvalue="CLASS1 NET PIN">I/O Connector Pin</value>
+        <value altvalue="FILTER_CAP PIN">Filter Component Pin</value>
+        <value altvalue="VIO MESSAGE">Violation Message</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">1.0</value>
+      </param>
+      <param label="I/O Nets Class to Include" name="NET LISTING" type="multi_select_list" view="advanced">
+        <description>Specifies the type of I/O Nets to include in this rule analysis.  Class 1L: low speed intentional signals that leave the shielded enclosure  Class 1H: high speed intentional signals that leave the shielded enclosure  Class 2:  signals that leave the board on a cable and remain within the shielded enclosure  Class 3:  signals that leave the board directly to another board and remain within the  shielded enclosure</description>
+        <value altvalue="IO">All I/O Nets</value>
+        <value altvalue="IO_CLASS1L" type="default">Class 1L I/O Nets</value>
+        <value altvalue="IO_CLASS1H" type="default">Class 1H I/O Nets</value>
+        <value altvalue="IO_CLASS2">Class 2 I/O Nets</value>
+        <value altvalue="IO_CLASS3">Class 3 I/O Nets</value>
+      </param>
+    </rule>
+    <rule engname="DstncFrmOsclltrTClck" id="16" longname="Distance from Oscillator to Clock Driver" shortname="Distance from Oscillator to Clock Driver">
+      <description>All oscillators must be placed within the specified distance of the clock driver
+(or other device) that they drive.</description>
+      <param label="Rule State" name="RULE STATE" type="boolean" view="always">
+        <description>Selects if EMI Scannner will check this rule. Rule State = 'off' means EMI Scannner will ignore this rule.</description>
+        <value type="default">On</value>
+        <value>Off</value>
+      </param>
+      <param label="Max Distance from Oscillator to Clock Driver" name="MAX DIST FROM OSCILLATOR TO CLOCK DRIVER" type="float_length" units="mm" view="always">
+        <description>Allows the user to specify the maximum distance between an oscillator and the clock  drivers, etc. that it drives.</description>
+        <value type="default">12.7</value>
+      </param>
+      <param label="Sort by Column" name="SORTED COLUMN" type="single_select_list" view="always">
+        <description>Specifies the column on which to sort the results. Select from the pull-down menu.</description>
+        <value altvalue="INDEX" type="default">Index</value>
+        <value altvalue="OSC NET">Oscillator Net Name</value>
+        <value altvalue="CLK DRV PIN">Clock Driver Pin</value>
+        <value altvalue="OSC PIN">Oscillator Pin</value>
+      </param>
+      <param label="Log File State" name="LOG STATE" type="boolean" view="advanced">
+        <description>Selects if EMI Scannner will create a log file with additional details (intended for debug use).</description>
+        <value>On</value>
+        <value type="default">Off</value>
+      </param>
+      <param label="Weighting Factor" name="WEIGHTING FACTOR" type="float" units=" " view="advanced">
+        <description>Allows the user to specify the weighting factor (0&lt;factor&lt;=1) that is applied to violations  of this rule when assigning a rank. The rank for a violation is its own "degree of badness" times  the rule's weighting factor. The ranking enables a user to focus on the more serious violations  first.</description>
+        <value type="default">0.5</value>
+      </param>
+      <param label="Require Only One Comp Pin to be Within Specified Distance" name="AT LEAST ONE COMPONENT PIN MUST BE INSIDE BOX" type="boolean" view="advanced">
+        <description>Allegro sometimes defines a component's boundary box too large. Since the rule is looking  for whether the component falls within a specified distance from the oscillator, this can  lead to the rule thinking that a component meets this requirement when it does not really  meet the requirement. The user can change how EMI Scannner determines whether the component  meets the requirement in one of three ways:  a) Treat the component as meeting the requirement if any pin of the component is within  the specified distance:  Set: " Require Only One Component Pin to be Within Specified Distance " =  yes and  " Require ALL Component Pins to be Within Specified Distance " = no  b) Treat the component as meeting the requirement if all pins of the component are within  the specified distance:  Set: " Require Only One Component Pin to be Within Specified Distance " =  yes and  " Require ALL Component Pins to be Within Specified Distance " = yes  c) Treat the component as meeting the requirement if the component's boundary box meets  the requirement:  Set: " Require Only One Component Pin to be Within Specified Distance " =  no and  " Require ALL Component Pins to be Within Specified Distance " = yes or no</description>
+        <value type="default">Yes</value>
+        <value>No</value>
+      </param>
+      <param label="Require ALL Comp Pins to be Within Specified Distance" name="ALL COMPONENT PINS MUST FALL INSIDE BOX" type="boolean" view="advanced">
+        <description>Allegro sometimes defines a component's boundary box too large. Since the rule is looking  for whether the component falls within a specified distance from the oscillator, this can  lead to the rule thinking that a component meets this requirement when it does not really  meet the requirement. The user can change how EMI Scannner determines whether the component  meets the requirement in one of three ways:  a) Treat the component as meeting the requirement if any pin of the component is within  the specified distance:  Set: " Require Only One Component Pin to be Within Specified Distance " =  yes and  " Require ALL Component Pins to be Within Specified Distance " = no  b) Treat the component as meeting the requirement if all pins of the component are within  the specified distance:  Set: " Require Only One Component Pin to be Within Specified Distance " =  yes and  " Require ALL Component Pins to be Within Specified Distance " = yes  c) Treat the component as meeting the requirement if the component's boundary box meets  the requirement:  Set: " Require Only One Component Pin to be Within Specified Distance " =  no and  " Require ALL Component Pins to be Within Specified Distance " = yes or no</description>
+        <value>Yes</value>
+        <value type="default">No</value>
+      </param>
+    </rule>
+  </ruletype>
+
+</emsattree>

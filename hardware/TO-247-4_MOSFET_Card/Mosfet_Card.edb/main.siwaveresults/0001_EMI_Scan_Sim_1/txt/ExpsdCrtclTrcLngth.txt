@@ -1,0 +1,38 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___LENGTH OF EXPOSED CRITICAL TRACES___
+** INTRODUCTION **
+
+All critical nets must be buried between solid ground/power planes. 
+Portions of critical nets on outside layers must be kept shorter than 
+5.08 mm 
+. The total exposed length of a critical net on an outside 
+layer must be kept to less than 12.7 mm 
+. If no buried wiring layers exist, critical traces must be run on the side of 
+card (top or bottom) nearest the grounded case. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Maximum Exposed Critical Net Segment Length  5.08   
+Total Maximum Exposed Critical Net Length  12.7   
+Sort by Column  INDEX  
+Weighting Factor  0.7    
+Net Choice  CRITICAL  
+
+** RESULTS: **
+INDEX  NET    LAYER  TYPE OF VIO  OUTSIDE LAYER  SEG(S) CHAIN LENGTH  SEG(S) TOTAL LENGTH  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

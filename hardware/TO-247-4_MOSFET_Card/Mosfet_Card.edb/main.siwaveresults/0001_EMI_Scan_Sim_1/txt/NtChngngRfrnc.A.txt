@@ -1,0 +1,58 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___CRITICAL NET CHANGING REFERENCE PLANE___
+** INTRODUCTION **
+
+The output from Rule 2 is divided into three parts. Part A shows nets found that have more than the 
+'Number of Vias Allowed on Net'. Part B shows any of the vias in violation from Part A that do not 
+have enough capacitors or vias connecting the two reference planes within an allowable 
+distance. Part C shows if any of the vias from Part A cause return currents in other vias to exceed 
+the 'Max Current Limit' specified. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Sort Changing Reference Violation by Column  INDEX  
+Sort Capacitor/Via Violation by Column  INDEX  
+Sort Overused Via Violation by Column  NET    
+Overused Return Vias  NO     
+Max Current Limit  2.0    
+Weighting Factor  1.0    
+Recognize Dual Plane Reference Within  0.0508  
+Allow Partial Reference Plane Change  YES    
+Check for Plane Decoupling  YES    
+Include ALL Reference Plane Changes  YES    
+Number of Vias Allowed on Net  0      
+Allow Via Close to IC  YES    
+Max Distance from IC to Ignored Via  12.7   
+Use Point-to-Point Distance from IC to Via  NO     
+Allow Via Connection Between Reference Planes  YES    
+Allow Complex Via Connections (Jogging) Between Planes  NO     
+Num of Decoupling Caps Required Within Smaller Radius  2      
+Num of Vias Required Within Smaller Radius  2      
+Small Radius Allowable Capacitor Distance  6.35   
+Small Radius Allowable Via Distance  8.89   
+Num of Decoupling Caps Required Within Larger Radius  3      
+Num of Vias Required Within Larger Radius  3      
+Large Radius Allowable Capacitor Distance  10.16  
+Large Radius Allowable Via Distance  12.7   
+Additional Search Range Percent  100    
+Force All Plane Combinations to Be Decoupled  NO     
+Net Choice  CRITICAL  
+
+** RESULTS: **
+INDEX  NET    VIA    REF LAYER 1  REF LAYER 2  1ST SEGMENT  2ND SEGMENT  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

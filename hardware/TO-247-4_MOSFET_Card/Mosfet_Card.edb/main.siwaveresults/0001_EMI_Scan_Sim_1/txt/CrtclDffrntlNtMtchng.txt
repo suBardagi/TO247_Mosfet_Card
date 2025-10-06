@@ -1,0 +1,36 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___CRITICAL DIFFERENTIAL NET LENGTH MATCHING AND SPACING___
+** INTRODUCTION **
+
+The length of the Differential Pair nets must be within 
+1.27 mmand 
+the distance between the pair must be no more than 
+0.635 mm. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Max Distance Between Complementary Nets  0.635  
+Maximum Length Mismatch  1.27   
+Sort by Column  INDEX  
+Weighting Factor  0.7    
+Min Critical Net Segment Length  1.27   
+Critical Net Choice  CRITICAL  
+
+** RESULTS: **
+INDEX  CRITICAL NET  CRIT MATE NET  MIS-MATCH DIFF  CRIT SEG LAYER  MATE SEG LAYER  VIOLATING SEG  VIO MESSAGE  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	0__
+================================================================================

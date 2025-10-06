@@ -1,0 +1,52 @@
+ 
+Ansys Electronics Desktop Version 2024.2.0, Build: 2024-05-23 02:23:50
+Location: C:\Program Files\AnsysEM\v242\Win64\ansysedt.exe
+Batch Solve/Save: C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\main.aedb
+Starting Batch Run: 8:15:40 PM  Oct 06, 2025
+Num tasks for machine localhost = -1
+[info] Num tasks for machine localhost = -1
+Num cores for machine localhost = 4
+[info] Num cores for machine localhost = 4
+RAM limit for machine localhost = 90
+[info] RAM limit for machine localhost = 90
+GPU count for machine localhost = 0
+[info] GPU count for machine localhost = 0
+Running as user : SUBARDAGI\90541
+Temp directory: C:\Users\90541\AppData\Local\Temp
+Project directory: C:\Users\90541\Documents\Ansoft
+Simulation settings:
+[info] Simulation settings:
+
+Design type: HFSS 3D Layout Design
+[info] 
+Design type: HFSS 3D Layout Design
+Allow off core: True
+[info] Allow off core: True
+Using automatic settings
+[info] Using automatic settings
+Optimetrics variations will be solved sequentially.
+
+[info] Optimetrics variations will be solved sequentially.
+
+Machines:
+[info] Machines:
+localhost RAM: 90%, 4 cores, 0 GPUs
+
+[info] localhost RAM: 90%, 4 cores, 0 GPUs
+
+[info] Using command line: "C:\Program Files\AnsysEM\v242\Win64\ansysedt.exe -ng -WaitForLicense -BatchSolve main:Nominal:HFSS Setup 1 -Monitor -MachineList list=localhost:-1:4:90% -Auto -BatchExtract C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\batchExtract.py -LogFile C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\0002_HFSS_Setup_1.log -batchoptions 'HPCLicenseType'=Pack 'HFSS 3D Layout Design/MPIVendor'='Intel' 'HFSS 3D Layout Design/MPIVersion'='2021' C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\main.aedb".
+[info] Project:main, Design:main, Mesh pre-processing took: 4.096sec
+ (08:16:02 PM  Oct 06, 2025)
+[warning] Project:main, Design:main, Results obtained using ideal embedded circuit elements deteriorate with increasing separation between terminals.  Circuit element C8:1:2 exceeds the recommended lambda/20. (08:16:02 PM  Oct 06, 2025)
+[warning] Project:main, Design:main, Results obtained using ideal embedded circuit elements deteriorate with increasing separation between terminals.  Circuit element C4:1:2 exceeds the recommended lambda/20. (08:16:02 PM  Oct 06, 2025)
+[warning] Project:main, Design:main, Results obtained using ideal embedded circuit elements deteriorate with increasing separation between terminals.  Circuit element C15:1:2 exceeds the recommended lambda/20. (08:16:02 PM  Oct 06, 2025)
+[warning] Project:main, Design:main, Results obtained using ideal embedded circuit elements deteriorate with increasing separation between terminals.  Circuit element C21:1:2 exceeds the recommended lambda/20. (08:16:02 PM  Oct 06, 2025)
+[error] Project:main, Design:main, No excitations are defined. (08:16:02 PM  Oct 06, 2025)
+[error] Project:main, Design:main, Design validation failed (08:16:02 PM  Oct 06, 2025)
+[error] Project:main, Design:main, Script macro error: Solution data is not available.  It was either not solved or was made invalid by subsequent design changes. (08:16:05 PM  Oct 06, 2025)
+[error] Error in command execution
+[error] Exception: ExportNetworkData(string variationkey, Structured Array sourcenames, int format, string filename, Structured Array freqargs, long bRenormalize, long double ref_impedance, [string displaytype /*optional*/], [int pass /*optional*/], [int complexFormat /*optional*/], [int precision /*optional*/], [long useExportFreqs /*optional*/], [long includeGammaComments /*optional*/], [long supportNonStdExport /*optional*/])(,IronPython.Runtime.List,3,C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\main.ts,IronPython.Runtime.List,True,50,S,-1,0,15,True) - call failed. Logs or message window might have more details
+In file "C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0002_HFSS_Setup_1/batchExtract.py", line 5 ---- While executing script: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0002_HFSS_Setup_1/batchExtract.py
+BatchExtract failed.
+[info] BatchExtract failed.
+Stopping Batch Run: 8:16:13 PM  Oct 06, 2025

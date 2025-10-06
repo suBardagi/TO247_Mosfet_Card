@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title></title>
+  <style type="text/css">
+    <!--
+  BODY {background-color: ghostwhite; font-family:Lucida, Times, "New Century Schoolbook", Times, serif}
+  H1 {color: blue}
+  H1 I {color: blue font-style: italic}
+  H3 {color: black}
+  B I {color: blue; font-style: italic}
+  EM {color: green}
+  P {color: black}
+  P EM {color: red}
+  BR {line-height: 50%}
+  TD {color: black}
+  CODE {color: green; font-family: "Lucida Typewriter", Courier, Fixed, monospace; line-height: 120%}
+  PRE {color: black; font-family: Courier, Fixed, "Lucida Typewriter", monospace;font-size: 12pt}
+  UL {margin-left: 10%}
+  LI {list-style-image: url(gifs/bullet.gif); list-style-type: circle}
+  -->
+  </style>
+  </head>
+
+  <body>
+    <h1></h1>
+
+<h1> Critical Net Crossing Split Reference Plane </h1>
+<h3> Introduction </h3>
+  <p>
+When a critical signal net crosses a gap in the power or ground plane,one of the following methods is required to allow the proper flow of return currents:  1) Two stitching capacitors across the gap within 7.62 mm, or two pairs of decoupling capacitors between the power and ground planes within 7.62 mm of the crossing, one pair on each side of the gap on one side of the trace and the other pair on the other side of the trace.
+  </p>
+  <p>
+<b> Settings Set in the Profile: </b>
+  </p>
+  <table cellspacing="5">
+
+    <tr>
+      <td> Individual HTML Output Files </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Units </td><td> mm </td>
+    </tr>
+
+    <tr>
+      <td> Max Allowable Distance from Net Crossing to Stitching Caps </td><td> 7.62 </td>
+    </tr>
+
+    <tr>
+      <td> Max Allowable Return Current Diversion </td><td> 10.16 </td>
+    </tr>
+
+    <tr>
+      <td> Sort by Column </td><td> NET </td>
+    </tr>
+
+    <tr>
+      <td> Weighting Factor </td><td> 1.0 </td>
+    </tr>
+
+    <tr>
+      <td> Only Identify Gaps Between Planes on Same Layer </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Recognize Dual Plane Reference Within </td><td> 0.0508 </td>
+    </tr>
+
+    <tr>
+      <td> Max Distance Between Crossing Points for Combination as Single Gap </td><td> 1.27 </td>
+    </tr>
+
+    <tr>
+      <td> Suppress Violation for Traces Connected to Via in Gap </td><td> YES </td>
+    </tr>
+
+    <tr>
+      <td> Max Distance from Reference Plane for Via in Gap </td><td> 1.27 </td>
+    </tr>
+
+  </table>
+  <p>
+<b> NOTE: The letters in the parenthesis after net names are net tags: * is a critical net, C is a clock net, P is a power net, and G is a ground net </b>
+  </p>
+  <p>
+<b> NOTE: The letters in the parenthesis after the comp names are types of capacitors: D is a decoupling cap and S is a stitching cap </b>
+  </p>
+<h3> Results: </h3>
+  <table cellspacing="5">
+
+    <tr>
+      <th valign=center align=left> INDEX </th><th valign=center align=left> NET </th><th valign=center align=left> GAP POINT </th><th valign=center align=left> SIG LAYER </th><th valign=center align=left> REF LAYERS </th><th valign=center align=left> CAPS FOUND </th><th valign=center align=left> INFO </th><th valign=center align=left> CAP SEARCH BOX </th><th valign=center align=left> RANK </th>
+    </tr>
+
+  </table>
+  <p>
+<b> Number of Violations:	0 </b>
+  </p>
+  <p>
+<b> Number of Gap Crossings Analyzed:	0 </b>
+  </p>
+<hr>
+    <hr>
+<p>
+  File Created On : Mon Oct  6 20:14:45 2025
+<br>
+  File Created By : Ansys EMI Scanner 2024 R2
+</p>
+  </body>
+</html>

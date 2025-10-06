@@ -1,0 +1,47 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___CRITICAL NET CROSSING SPLIT REFERENCE PLANE___
+** INTRODUCTION **
+
+When a critical signal net crosses a gap in the power or ground plane, 
+one of the following methods is required to allow the proper flow of 
+return currents: 1) Two stitching capacitors across the gap within 
+7.62 mm, or 
+two pairs of decoupling capacitors between the power and ground planes 
+within 7.62 mm of 
+the crossing, one pair on each side of the gap on one side of the trace and the 
+other pair on the other side of the trace. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Max Allowable Distance from Net Crossing to Stitching Caps  7.62   
+Max Allowable Return Current Diversion  10.16  
+Sort by Column  NET    
+Weighting Factor  1.0    
+Only Identify Gaps Between Planes on Same Layer  YES    
+Recognize Dual Plane Reference Within  0.0508  
+Max Distance Between Crossing Points for Combination as Single Gap  1.27   
+Suppress Violation for Traces Connected to Via in Gap  YES    
+Max Distance from Reference Plane for Via in Gap  1.27   
+
+
+__NOTE: The letters in the parenthesis after net names are net tags: * is a critical net, C is a clock net, P is a power net, and G is a ground net__
+
+__NOTE: The letters in the parenthesis after the comp names are types of capacitors: D is a decoupling cap and S is a stitching cap__
+** RESULTS: **
+INDEX  NET    GAP POINT  SIG LAYER  REF LAYERS  CAPS FOUND  INFO   CAP SEARCH BOX  RANK   
+
+
+__Number of Violations:	0__
+
+__Number of Gap Crossings Analyzed:	0__
+================================================================================

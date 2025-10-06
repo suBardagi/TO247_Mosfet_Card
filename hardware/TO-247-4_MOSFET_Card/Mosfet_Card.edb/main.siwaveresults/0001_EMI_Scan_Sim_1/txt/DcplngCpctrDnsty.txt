@@ -1,0 +1,44 @@
+****************************************************************************
+
+  
+
+  File Created On : Mon Oct  6 20:14:45 2025
+
+  File Created By : Ansys EMI Scanner 2024 R2
+
+****************************************************************************
+___DECOUPLING CAPACITOR DENSITY___
+** INTRODUCTION **
+
+Decoupling capacitors should be distributed as evenly as possible across the entire board. 
+For typical board technologies, a good rule of thumb is one capacitor per square inch. 
+Decoupling capacitors should be connected between adjacent planes, regardless of their DC 
+nominal level. 
+
+
+__Settings Set in the Profile:__
+Individual HTML Output Files  YES    
+Units  mm     
+Check Only for Pwr-to-Gnd Plane Decoupling  NO     
+Grid Size (X Direction)  25.4   
+Grid Size (Y Direction)  25.4   
+Number of Decoupling Caps Required within Each Grid  1      
+Number of Vias Required within Each Grid  1      
+Sort by Column  INDEX  
+Weighting Factor  0.8    
+Allow Via Connection for Same Net Name  YES    
+Include Power/Ground Islands on Signal Layers  YES    
+Check Only When Grid on Board by at Least  33     
+Ignore Violations from Pwr/Gnd Nets with Same Name  NO     
+Require One Capacitor Pin to be Inside Grid  YES    
+Require ALL Capacitor Pins to be Inside Grid  YES    
+Layer Choice  ALL    
+
+** RESULTS: **
+INDEX  LAYERS  REF PLANE 1  REF PLANE 2  GRID LOCATION  OTHER PAIRS W/SAME NETS FOR THIS GRID  ADD INFO  RANK   
+
+
+__Number of Violations:	0__
+
+__Number Analyzed:	16__
+================================================================================

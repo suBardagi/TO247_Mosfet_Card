@@ -1,0 +1,128 @@
+[Mon Oct  6 20:13:39 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 siwave_ng 2024 R2 (Built: May 23 2024 03:46:15):
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Loading project...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Initializing layout database...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Database load complete:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Commencing simulation...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Simulation "Crosstalk Scan 1" started on host SUBARDAGI at Mon Oct  6 20:13:40 2025:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Generating solver input files...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  5.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 [Simulation Directory]: "C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0000_Crosstalk_Scan_1/":
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 [Simulation Log File]: "C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0000_Crosstalk_Scan_1/0000_Crosstalk_Scan_1.simlog":
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0117 All geometry on net "DUMMY" will be ignored:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  10.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying nets for inclusion in simulation...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +5V:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +12V:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +15V_Highside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +15V_Lowside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 GND:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 GNDPWR:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 GND_Highside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 GND_Lowside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 Gate_Highside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 Gate_Lowside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetC2_2:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetC7_2:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetD1_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetD2_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetD3_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetD4_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR6_2:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR7_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR8_2:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR9_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR12_2:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR13_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR14_2:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 NetR15_1:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 PWM_Highside_N:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 PWM_Highside_P:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 PWM_Lowside_N:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 PWM_Lowside_P:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 Source_Highside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 Source_Lowside:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  15.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Performing basic DRC...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Merging appropriate traces...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying traces to process...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying planes to process...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  17.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Generating antipads in planes...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Modeling appropriate pads as planes...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  20.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  24.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Uniting geometry...:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  30.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  31.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  32.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  33.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  34.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  35.000000:
+[Mon Oct  6 20:13:40 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Running geometry preprocessor...:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Processing facets...:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  50.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying traces to process...:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Processing traces...:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  51.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  52.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  53.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  54.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  55.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  56.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  57.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  58.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  59.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  60.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Processing circuit elements...:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  70.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  80.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Writing solver input files...:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0110 Changing resistance of zero-valued resistor "R10" to 9.000000e-06 (ohm):
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0110 Changing resistance of zero-valued resistor "R16" to 9.000000e-06 (ohm):
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  90.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  95.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  100.000000:
+[Mon Oct  6 20:13:41 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Solving for frequency domain transmission line crosstalk... :
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing solution setup: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 1.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 2.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Creating initial mesh: 
+C:\Program Files\AnsysEM\v242\Win64\geomproc.exe:PID 76692: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 5.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Reading solver input files: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing material definitions: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing stackup definition: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing multi-port S model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing multi-port S model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing multi-port S model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing circuit information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing transmission lines: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 6.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing vias: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing Bondwires: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Identifying nets: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Processing circuit nodes: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing plane edges: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 7.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Identifying metal edges...: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Computing plane extent: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Performing smart coupling detection...: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up cavities: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 11.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Processing trace cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 12.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Solving cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up resolve cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up split cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 15.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Performing hot spot detection: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 30.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 50.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 70.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 100.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message SIwave hotspot detection finished: 
+[Mon Oct  6 20:13:45 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Crosstalk scan solve completed with return code 0:
+[Mon Oct  6 20:13:45 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Simulation "Crosstalk Scan 1" completed on host SUBARDAGI at Mon Oct  6 20:13:45 2025:
+[Mon Oct  6 20:13:46 2025] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Saved "C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0000_Crosstalk_Scan_1/0000_Crosstalk_Scan_1.siw":

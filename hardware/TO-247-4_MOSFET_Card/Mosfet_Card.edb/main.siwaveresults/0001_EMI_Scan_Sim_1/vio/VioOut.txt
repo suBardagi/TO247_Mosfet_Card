@@ -1,0 +1,46 @@
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Crossing Split Reference Plane!H!** RULE 01 **!Critical Nets Crossing!Reference Plane Gap!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Changing Reference Plane - A!H!*** Rule 02 A***!Number of Allowed Vias On Critical Nets!Critical Nets With Vias!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Changing Reference Plane - B!H!*** Rule 02 B***!Number of Allowed Vias On Critical Nets!Missing Nearby Decaps!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Changing Reference Plane - C!H!*** Rule 02 C***!Number of Allowed Vias On Critical Nets!Over-Used Vias!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Near Edge of Reference Plane!H!*** RULE 03 ***!Critical Nets Close To!Edge of Reference Plane!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Near I/O Net!H!*** RULE 04 ***!Distance Between Critical and!I/O Nets!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Length of Exposed Critical Traces!H!*** Rule 05 ***!Critical Nets Buried!Nets Buried Between ground/power planes!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Isolation (Single-Ended Nets)!H!*** Rule 06 ***!Net Infringing On Critical Net!No Ground Guard Trace Along Critical Net!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Net Isolation (Differential Nets)!H!*** Rule 07 ***!Net Infringing On Differential Pair!No Ground Guard Trace Along Differential Pair!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Critical Differential Net Length Matching and Spacing!H!*** Rule 08 ***!Differential Net Length Mis-Match!Diffential Net Mate to Mate Gap Distance!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Wide Power/Ground Traces!H!*** RULE 09 ***!Wide Power/Ground Traces!!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Decoupling Capacitor Density!H!*** RULE 10 ***!Distribution of!Decoupling Capactiors!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Decoupling Capacitor Distance from IC Power Pin!H!*** Rule 11 ***!Decoupling Capacitors Connected To Planes!Power/Ground pins attached to ref layers!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!IC Power/Ground-Reference Pin Distance to Via!H!*** RULE 12 ***!Short Traces Between IC and!Power/Ground Vias!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Decoupling Capacitor Distance to Via!H!*** RULE 13 ***!Short Traces Between Decap and!Power/Ground Vias!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Power/Ground-Reference Trace Decoupling!H!*** Rule 14 ***!Decoupling Capacitor On Power/Ground Traces!!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Power Via Density!H!*** Rule 17 ***!Power Via Density!Power nets that do not have not enough vias between shapes on adjacent layers!
+I!0!T!Power Via Density!N!GND_Highside!U!GND!L!Top Layer!0!null!shield!conductor!L!Layer 1!2!embedded!shield!conductor!L!Layer 1!2!embedded!shield!conductor!B!0!0!25.4!25.4!R!-1!
+I!1!T!Power Via Density!N!GND_Highside!U!GND!L!Layer 1!2!embedded!shield!conductor!L!Layer 2!4!embedded!shield!conductor!L!Layer 2!4!embedded!shield!conductor!B!0!0!25.4!25.4!R!-1!
+I!2!T!Power Via Density!N!GND_Highside!U!GND!L!Layer 2!4!embedded!shield!conductor!L!Bottom Layer!6!null!shield!conductor!L!Bottom Layer!6!null!shield!conductor!B!0!0!25.4!25.4!R!-1!
+I!3!T!Power Via Density!N!GND_Highside!U!GND!L!Top Layer!0!null!shield!conductor!L!Layer 1!2!embedded!shield!conductor!L!Layer 1!2!embedded!shield!conductor!B!0!25.4!25.4!50.8!R!-1!
+I!4!T!Power Via Density!N!GND_Highside!U!GND!L!Layer 1!2!embedded!shield!conductor!L!Layer 2!4!embedded!shield!conductor!L!Layer 2!4!embedded!shield!conductor!B!0!25.4!25.4!50.8!R!-1!
+I!5!T!Power Via Density!N!GND_Highside!U!GND!L!Layer 2!4!embedded!shield!conductor!L!Bottom Layer!6!null!shield!conductor!L!Bottom Layer!6!null!shield!conductor!B!0!25.4!25.4!50.8!R!-1!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Disparate Reference Overlap!H!*** RULE 10 ***!Distribution of!Decoupling Capactiors!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!I/O Filter Distance to I/O Connector!H!*** Rule 15 ***!I/O Filter Distance!!
+#<@># File: C:/Users/90541/Desktop/TO247_Mosfet_Card/hardware/TO-247-4_MOSFET_Card/Mosfet_Card.edb/main.siwaveresults/0001_EMI_Scan_Sim_1/\vio\VioOut.txt | Created On: 10/06/25   20:14 | Spec. v2024 R2 | ''
+I!4294967295!T!Distance from Oscillator to Clock Driver!H!*** Rule 16 ***!All oscillator devices must be placed within the specified distance of their clock drivers.!!

@@ -1,0 +1,19 @@
+--------------------- Mon Oct  6 20:11:18 2025 ---------------------
+
+Creating SIwave session log C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.log
+Ansys(R) SIwave 2024 R2 (Build 2024-05-23 02:23:50)
+OS: Windows 11 Home  (Build 26100)
+
+Saved C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siw
+Displaying crosstalk scan for simulation "Crosstalk Scan 1"...
+Warning:  Thermal properties are incomplete for material "pec", augmenting with properties from system material "copper"
+Warning:  Thermal properties are incomplete for material "PP-006", augmenting with properties from system material "FR4_epoxy"
+Writing batch extract script file C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\batchExtract.py... done
+ansysedt command line: "C:\Program Files\AnsysEM\v242\Win64\ansysedt.exe" -ng -WaitForLicense -BatchSolve "main":Nominal:"HFSS Setup 1" -Monitor -MachineList  list="localhost:-1:4:90%"  -Auto -BatchExtract "C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\batchExtract.py" -LogFile "C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\0002_HFSS_Setup_1.log" -batchoptions "'HPCLicenseType'=Pack 'HFSS 3D Layout Design/MPIVendor'='Intel' 'HFSS 3D Layout Design/MPIVersion'='2021'" "C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siwaveresults\0002_HFSS_Setup_1\main.aedb"
+Simulation did not produce any results.
+
+
+--------------------- Mon Oct  6 20:16:25 2025 ---------------------
+
+Appending to SIwave session log C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.log
+Saved C:\Users\90541\Desktop\TO247_Mosfet_Card\hardware\TO-247-4_MOSFET_Card\Mosfet_Card.edb\main.siw
